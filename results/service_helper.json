@@ -1,0 +1,1293 @@
+[
+  {
+    "isImportant": false,
+    "serviceHelper": "android.view.ViewRootImpl",
+    "stubInterfaceList": [
+      "android.view.IWindowSession"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.le.BluetoothLeAdvertiser",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.UiAutomation",
+    "stubInterfaceList": [
+      "android.accessibilityservice.IAccessibilityServiceClient",
+      "android.app.IUiAutomationConnection"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.MediaScannerConnection",
+    "stubInterfaceList": [
+      "android.media.IMediaScannerService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.session.MediaController",
+    "stubInterfaceList": [
+      "android.media.session.ISessionController"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.bluetooth.BluetoothManager",
+    "stubInterfaceList": [
+      "android.bluetooth.BluetoothAdapter$1",
+      "com.android.server.BluetoothManagerService",
+      "android.bluetooth.BluetoothDevice$1"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.speech.SpeechRecognizer",
+    "stubInterfaceList": [
+      "android.speech.IRecognitionService"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.KeyguardManager",
+    "stubInterfaceList": [
+      "android.view.IWindowManager",
+      "android.app.trust.ITrustManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.hardware.location.GeofenceHardware",
+    "stubInterfaceList": [
+      "android.hardware.location.IGeofenceHardware"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.service.voice.VoiceInteractionService",
+    "stubInterfaceList": [
+      "com.android.internal.app.IVoiceInteractionManagerService",
+      "android.service.voice.IVoiceInteractionService"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.SearchManager",
+    "stubInterfaceList": [
+      "android.app.ISearchManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.media.session.MediaSessionManager",
+    "stubInterfaceList": [
+      "android.media.session.ISessionManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.tv.TvInputManager$Session",
+    "stubInterfaceList": [
+      "android.media.tv.ITvInputManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.telecom.ParcelableConnection",
+    "stubInterfaceList": [
+      "com.android.internal.telecom.IVideoProvider"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.net.PacProxySelector",
+    "stubInterfaceList": [
+      "com.android.net.IProxyService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.Instrumentation",
+    "stubInterfaceList": [
+      "android.app.IInstrumentationWatcher",
+      "android.app.IUiAutomationConnection"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothHeadsetClient",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothHeadsetClient",
+      "android.bluetooth.IBluetoothStateChangeCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.os.SystemVibrator",
+    "stubInterfaceList": [
+      "android.os.IVibratorService"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.hardware.fingerprint.FingerprintManager",
+    "serviceName": "\"fingerprint\"",
+    "stubInterfaceList": [
+      "android.hardware.fingerprint.IFingerprintService",
+      "android.hardware.fingerprint.IFingerprintServiceReceiver"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.service.wallpaper.WallpaperService$Engine",
+    "stubInterfaceList": [
+      "android.view.IWindowSession",
+      "android.service.wallpaper.IWallpaperConnection"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.backup.BackupManager",
+    "stubInterfaceList": [
+      "android.app.backup.IBackupManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.midi.MidiInputPort",
+    "stubInterfaceList": [
+      "android.media.midi.IMidiDeviceServer"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.net.wifi.p2p.WifiP2pManager",
+    "serviceName": "\"wifip2p\"",
+    "stubInterfaceList": [
+      "android.net.wifi.p2p.IWifiP2pManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.projection.MediaProjection",
+    "stubInterfaceList": [
+      "android.media.projection.IMediaProjection"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.Ringtone",
+    "stubInterfaceList": [
+      "android.media.IRingtonePlayer"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.media.AudioManager",
+    "stubInterfaceList": [
+      "android.media.IAudioFocusDispatcher",
+      "android.media.IAudioService"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.telephony.TelephonyManager",
+    "stubInterfaceList": [
+      "com.android.internal.telephony.ITelephonyRegistry"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.WallpaperManager",
+    "stubInterfaceList": [
+      "com.android.server.wallpaper.WallpaperManagerService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.os.ResultReceiver",
+    "stubInterfaceList": [
+      "com.android.internal.os.IResultReceiver"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.appwidget.AppWidgetManager",
+    "serviceName": "\"appwidget\"",
+    "stubInterfaceList": [
+      "com.android.internal.appwidget.IAppWidgetService"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.hardware.hdmi.HdmiControlManager",
+    "serviceName": "\"hdmi_control\"",
+    "stubInterfaceList": [
+      "android.hardware.hdmi.IHdmiControlService"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.hardware.SerialManager",
+    "serviceName": "\"serial\"",
+    "stubInterfaceList": [
+      "android.hardware.ISerialManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.location.CountryDetector",
+    "serviceName": "\"country_detector\"",
+    "stubInterfaceList": [
+      "android.location.ICountryDetector"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.content.SyncContext",
+    "stubInterfaceList": [
+      "android.content.ISyncContext"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.backup.RestoreSession",
+    "stubInterfaceList": [
+      "android.app.backup.IRestoreSession"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.service.voice.VoiceInteractionSession",
+    "stubInterfaceList": [
+      "com.android.internal.app.IVoiceInteractionManagerService",
+      "com.android.internal.app.IVoiceInteractor",
+      "android.service.voice.IVoiceInteractionSession"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.usage.UsageStatsManager",
+    "serviceName": "\"usagestats\"",
+    "stubInterfaceList": [
+      "android.app.usage.IUsageStatsManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.nfc.cardemulation.CardEmulation",
+    "stubInterfaceList": [
+      "android.nfc.INfcCardEmulation"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.security.KeyStore",
+    "stubInterfaceList": [
+      "android.security.IKeystoreService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.SoundPool",
+    "stubInterfaceList": [
+      "com.android.internal.app.IAppOpsService",
+      "com.android.internal.app.IAppOpsCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.hardware.SystemSensorManager",
+    "stubInterfaceList": []
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.view.WindowManagerImpl",
+    "stubInterfaceList": [
+      "com.android.server.wm.WindowManagerService",
+      "com.android.server.wm.Session"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.content.pm.LauncherApps",
+    "serviceName": "\"launcherapps\"",
+    "stubInterfaceList": [
+      "android.content.pm.ILauncherApps"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.midi.MidiDevice$MidiConnection",
+    "stubInterfaceList": [
+      "android.media.midi.IMidiDeviceServer"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.telecom.VideoCallImpl",
+    "stubInterfaceList": [
+      "com.android.internal.telecom.IVideoProvider"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.telecom.ParcelableConference",
+    "stubInterfaceList": [
+      "com.android.internal.telecom.IVideoProvider"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.accounts.AccountAuthenticatorResponse",
+    "stubInterfaceList": [
+      "android.accounts.IAccountAuthenticatorResponse"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.session.MediaSession$Token",
+    "stubInterfaceList": [
+      "android.media.session.ISessionController"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.JobSchedulerImpl",
+    "serviceName": "\"jobscheduler\"",
+    "stubInterfaceList": [
+      "android.app.job.IJobScheduler"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.trust.TrustManager",
+    "serviceName": "\"trust\"",
+    "stubInterfaceList": [
+      "android.app.trust.ITrustManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.location.LocationManager",
+    "serviceName": "\"location\"",
+    "stubInterfaceList": [
+      "android.location.ILocationManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.tv.TvInputManager$Hardware",
+    "stubInterfaceList": [
+      "android.media.tv.ITvInputHardware"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.view.WindowId",
+    "stubInterfaceList": [
+      "android.view.IWindowId"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.telecom.TelecomManager",
+    "stubInterfaceList": []
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.location.Geocoder",
+    "stubInterfaceList": [
+      "android.location.ILocationManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.print.PrinterDiscoverySession",
+    "stubInterfaceList": [
+      "android.print.IPrinterDiscoveryObserver",
+      "android.print.IPrintManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.content.ClipboardManager",
+    "stubInterfaceList": [
+      "android.content.IClipboard"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.view.textservice.TextServicesManager",
+    "stubInterfaceList": [
+      "com.android.internal.textservice.ITextServicesManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothPbap",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothPbap",
+      "android.bluetooth.IBluetoothStateChangeCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.net.ConnectivityManager",
+    "serviceName": "\"connectivity\"",
+    "stubInterfaceList": [
+      "android.os.INetworkManagementService",
+      "android.net.IConnectivityManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothGattServer",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothGatt",
+      "android.bluetooth.IBluetoothGattServerCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.DownloadManager",
+    "stubInterfaceList": [
+      "com.android.server.content.ContentService"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.media.projection.MediaProjectionManager",
+    "stubInterfaceList": [
+      "android.media.projection.IMediaProjectionManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.os.UpdateLock",
+    "stubInterfaceList": [
+      "android.os.IUpdateLock"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.net.NetworkScoreManager",
+    "stubInterfaceList": [
+      "android.net.INetworkScoreService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.service.voice.VoiceInteractionSession$Request",
+    "stubInterfaceList": [
+      "com.android.internal.app.IVoiceInteractorRequest",
+      "com.android.internal.app.IVoiceInteractorCallback"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothAdapter",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothManager",
+      "android.bluetooth.IBluetooth",
+      "android.bluetooth.IBluetoothManagerCallback"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.os.CancellationSignal",
+    "stubInterfaceList": [
+      "android.os.ICancellationSignal"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.content.pm.PackageInstaller$Session",
+    "stubInterfaceList": [
+      "android.content.pm.IPackageInstallerSession"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.speech.RecognitionService$Callback",
+    "stubInterfaceList": [
+      "android.speech.IRecognitionListener"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.telephony.SubscriptionManager",
+    "stubInterfaceList": []
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.VoiceInteractor",
+    "stubInterfaceList": [
+      "com.android.internal.app.IVoiceInteractor"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.net.dhcp.DhcpClient",
+    "stubInterfaceList": [
+      "android.os.INetworkManagementService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.hardware.location.GeofenceHardwareImpl",
+    "stubInterfaceList": [
+      "android.location.IGpsGeofenceHardware",
+      "android.location.IFusedGeofenceHardware"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.midi.MidiOutputPort",
+    "stubInterfaceList": [
+      "android.media.midi.IMidiDeviceServer"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.ActivityManager",
+    "stubInterfaceList": [
+      "android.os.Handler$MessengerImpl"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.UiAutomationConnection",
+    "stubInterfaceList": [
+      "android.view.IWindowManager",
+      "android.content.pm.IPackageManager",
+      "android.accessibilityservice.IAccessibilityServiceClient",
+      "android.view.accessibility.IAccessibilityManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.AudioTrack",
+    "stubInterfaceList": [
+      "com.android.internal.app.IAppOpsService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothHeadset",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothHeadset",
+      "android.bluetooth.IBluetoothProfileServiceConnection",
+      "android.bluetooth.IBluetoothStateChangeCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.AppOpsManager",
+    "serviceName": "\"appops\"",
+    "stubInterfaceList": [
+      "com.android.internal.app.IAppOpsService"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.hardware.ConsumerIrManager",
+    "stubInterfaceList": [
+      "android.hardware.IConsumerIrService"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.NotificationManager",
+    "stubInterfaceList": [
+      "android.app.INotificationManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.view.inputmethod.InputMethodManager",
+    "stubInterfaceList": [
+      "com.android.internal.view.IInputContext",
+      "com.android.internal.view.IInputMethodManager",
+      "com.android.internal.view.IInputMethodSession"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.hardware.display.DisplayManager",
+    "stubInterfaceList": [
+      "com.android.server.display.DisplayManagerService$BinderService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.view.SurfaceView",
+    "stubInterfaceList": [
+      "android.view.IWindowSession"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothInputDevice",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothInputDevice",
+      "android.bluetooth.IBluetoothStateChangeCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.os.UserManager",
+    "serviceName": "\"user\"",
+    "stubInterfaceList": [
+      "android.os.IUserManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.provider.Settings$Secure",
+    "stubInterfaceList": [
+      "com.android.internal.widget.ILockSettings"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothA2dp",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothA2dp",
+      "android.bluetooth.IBluetoothStateChangeCallback"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothDevice",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetooth",
+      "android.bluetooth.IBluetoothManagerCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.net.NetworkPolicyManager",
+    "serviceName": "\"netpolicy\"",
+    "stubInterfaceList": [
+      "android.net.INetworkPolicyManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.accounts.AccountManagerResponse",
+    "stubInterfaceList": [
+      "android.accounts.IAccountManagerResponse"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.appwidget.AppWidgetHost",
+    "stubInterfaceList": [
+      "com.android.internal.appwidget.IAppWidgetService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothA2dpSink",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothA2dpSink",
+      "android.bluetooth.IBluetoothStateChangeCallback"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.content.IntentSender",
+    "stubInterfaceList": [
+      "android.content.IIntentSender"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.admin.DevicePolicyManager",
+    "stubInterfaceList": [
+      "android.app.admin.IDevicePolicyManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.AppImportanceMonitor",
+    "stubInterfaceList": [
+      "android.app.IProcessObserver"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.os.ServiceManager",
+    "stubInterfaceList": [
+      "android.os.IServiceManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.UiModeManager",
+    "stubInterfaceList": [
+      "android.app.IUiModeManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.content.pm.PackageManager$LegacyPackageInstallObserver",
+    "stubInterfaceList": [
+      "android.content.pm.IPackageInstallObserver"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.accounts.AccountManager",
+    "serviceName": "\"account\"",
+    "stubInterfaceList": [
+      "android.accounts.IAccountManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.database.BulkCursorDescriptor",
+    "stubInterfaceList": [
+      "android.database.IBulkCursor"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.service.dreams.DreamService",
+    "stubInterfaceList": [
+      "android.service.dreams.IDreamManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.service.persistentdata.PersistentDataBlockManager",
+    "serviceName": "\"persistent_data_block\"",
+    "stubInterfaceList": [
+      "android.service.persistentdata.IPersistentDataBlockService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.telecom.ParcelableCall",
+    "stubInterfaceList": [
+      "com.android.internal.telecom.IVideoProvider"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.backup.BackupTransport",
+    "stubInterfaceList": [
+      "com.android.internal.backup.IBackupTransport"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.view.textservice.SpellCheckerSession",
+    "stubInterfaceList": [
+      "com.android.internal.textservice.ITextServicesManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.telephony.CarrierConfigManager",
+    "stubInterfaceList": []
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.media.tv.TvInputManager",
+    "serviceName": "\"tv_input\"",
+    "stubInterfaceList": [
+      "android.media.tv.ITvInputManager",
+      "android.media.tv.ITvInputClient"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.midi.MidiDevice",
+    "stubInterfaceList": [
+      "android.media.midi.IMidiManager",
+      "android.media.midi.IMidiDeviceServer"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.usage.NetworkStatsManager",
+    "stubInterfaceList": []
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.os.BatteryManager",
+    "stubInterfaceList": [
+      "android.os.IBatteryPropertiesRegistrar",
+      "com.android.internal.app.IBatteryStats"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.view.WindowManagerGlobal",
+    "stubInterfaceList": [
+      "android.view.IWindowManager",
+      "android.view.IWindowSession"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.MediaPlayer",
+    "stubInterfaceList": [
+      "com.android.internal.app.IAppOpsService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothPan",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothPan",
+      "android.bluetooth.IBluetoothStateChangeCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.net.wifi.RttManager",
+    "serviceName": "\"rttmanager\"",
+    "stubInterfaceList": [
+      "android.net.wifi.IRttManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.os.storage.StorageManager",
+    "stubInterfaceList": [
+      "android.os.storage.IMountService"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.content.RestrictionsManager",
+    "serviceName": "\"restrictions\"",
+    "stubInterfaceList": [
+      "android.content.IRestrictionsManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.midi.MidiDeviceServer",
+    "stubInterfaceList": [
+      "android.media.midi.IMidiManager",
+      "android.media.midi.IMidiDeviceServer"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.service.trust.TrustAgentService",
+    "stubInterfaceList": [
+      "android.service.trust.ITrustAgentServiceCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.net.wifi.WifiManager",
+    "serviceName": "\"wifi\"",
+    "stubInterfaceList": [
+      "android.net.wifi.IWifiManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.media.midi.MidiManager",
+    "serviceName": "\"midi\"",
+    "stubInterfaceList": [
+      "android.media.midi.IMidiManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.AlarmManager",
+    "serviceName": "\"alarm\"",
+    "stubInterfaceList": [
+      "android.app.IAlarmManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.hardware.camera2.CameraManager",
+    "stubInterfaceList": []
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothSap",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothSap",
+      "android.bluetooth.IBluetoothStateChangeCallback"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.nfc.Tag",
+    "stubInterfaceList": [
+      "android.nfc.INfcTag"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothAvrcpController",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothAvrcpController",
+      "android.bluetooth.IBluetoothStateChangeCallback"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.session.MediaSession",
+    "stubInterfaceList": [
+      "android.media.session.ISession"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.os.PowerManager",
+    "serviceName": "\"power\"",
+    "stubInterfaceList": [
+      "android.os.IPowerManager",
+      "android.os.IDeviceIdleController"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothMap",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothMap",
+      "android.bluetooth.IBluetoothStateChangeCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.nfc.NfcManager",
+    "stubInterfaceList": []
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.hardware.display.VirtualDisplay",
+    "stubInterfaceList": [
+      "android.hardware.display.IVirtualDisplayCallback"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.security.KeyChain$KeyChainConnection",
+    "stubInterfaceList": [
+      "android.security.IKeyChainService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.printservice.PrintJob",
+    "stubInterfaceList": [
+      "android.printservice.IPrintServiceClient"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.telecom.InCallAdapter",
+    "stubInterfaceList": [
+      "com.android.internal.telecom.IInCallAdapter"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.hardware.usb.UsbManager",
+    "serviceName": "\"usb\"",
+    "stubInterfaceList": [
+      "android.hardware.usb.IUsbManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.os.DropBoxManager",
+    "serviceName": "\"dropbox\"",
+    "stubInterfaceList": [
+      "com.android.internal.os.IDropBoxManagerService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.nfc.NfcAdapter",
+    "stubInterfaceList": [
+      "android.nfc.INfcAdapter",
+      "android.nfc.INfcCardEmulation",
+      "android.nfc.INfcTag"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.database.BulkCursorToCursorAdaptor",
+    "stubInterfaceList": [
+      "android.database.IBulkCursor"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.hardware.radio.RadioManager",
+    "stubInterfaceList": []
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.telephony.SubscriptionManager$OnSubscriptionsChangedListener",
+    "stubInterfaceList": [
+      "com.android.internal.telephony.IOnSubscriptionsChangedListener"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.ActivityThread",
+    "stubInterfaceList": [
+      "android.content.pm.IPackageManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.content.pm.PackageManager$LegacyPackageDeleteObserver",
+    "stubInterfaceList": [
+      "android.content.pm.IPackageDeleteObserver"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.ActivityOptions",
+    "stubInterfaceList": [
+      "android.os.IRemoteCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.net.EthernetManager",
+    "serviceName": "\"ethernet\"",
+    "stubInterfaceList": [
+      "android.net.IEthernetManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.net.wifi.WifiScanner",
+    "serviceName": "\"wifiscanner\"",
+    "stubInterfaceList": [
+      "android.net.wifi.IWifiScanner"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.print.PrintManager",
+    "serviceName": "\"print\"",
+    "stubInterfaceList": [
+      "android.print.IPrintManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.view.accessibility.AccessibilityManager",
+    "stubInterfaceList": [
+      "android.view.accessibility.IAccessibilityManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.PendingIntent",
+    "stubInterfaceList": [
+      "android.content.IIntentSender"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.hardware.display.DisplayManagerGlobal",
+    "stubInterfaceList": [
+      "android.hardware.display.IDisplayManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.le.BluetoothLeScanner",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.hardware.camera2.impl.CameraDeviceImpl",
+    "stubInterfaceList": [
+      "android.hardware.camera2.ICameraDeviceUser"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.service.voice.AlwaysOnHotwordDetector",
+    "stubInterfaceList": [
+      "com.android.internal.app.IVoiceInteractionManagerService",
+      "android.service.voice.IVoiceInteractionService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.widget.Toast",
+    "stubInterfaceList": [
+      "android.app.INotificationManager"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "com.android.internal.policy.PhoneLayoutInflater",
+    "stubInterfaceList": []
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.view.accessibility.CaptioningManager",
+    "stubInterfaceList": [
+      "com.android.server.content.ContentService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.telecom.RemoteConnection",
+    "stubInterfaceList": [
+      "com.android.internal.telecom.IConnectionService"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.net.nsd.NsdManager",
+    "serviceName": "\"servicediscovery\"",
+    "stubInterfaceList": [
+      "android.net.nsd.INsdManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothHealth",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothHealth",
+      "android.bluetooth.IBluetoothStateChangeCallback"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.bluetooth.BluetoothGatt",
+    "stubInterfaceList": [
+      "android.bluetooth.IBluetoothGattCallback",
+      "android.bluetooth.IBluetoothGatt"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.app.StatusBarManager",
+    "stubInterfaceList": [
+      "com.android.internal.statusbar.IStatusBarService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.browse.MediaBrowser",
+    "stubInterfaceList": [
+      "android.service.media.IMediaBrowserService",
+      "android.service.media.IMediaBrowserServiceCallbacks"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.content.pm.PackageInstaller",
+    "stubInterfaceList": [
+      "android.content.pm.IPackageInstaller"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.media.audiopolicy.AudioPolicy",
+    "stubInterfaceList": [
+      "android.media.audiopolicy.IAudioPolicyCallback",
+      "android.media.IAudioService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.telecom.RemoteConnection$VideoProvider",
+    "stubInterfaceList": [
+      "com.android.internal.telecom.IVideoProvider",
+      "com.android.internal.telecom.IVideoCallback"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.media.MediaRouter",
+    "stubInterfaceList": [
+      "com.android.server.audio.AudioService",
+      "android.media.MediaRouter$Static$Client",
+      "com.android.server.media.MediaRouterService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.telecom.RemoteConference",
+    "stubInterfaceList": [
+      "com.android.internal.telecom.IConnectionService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.ActivityManager$AppTask",
+    "stubInterfaceList": [
+      "android.app.IAppTask"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.hardware.camera2.legacy.LegacyCameraDevice",
+    "stubInterfaceList": [
+      "android.hardware.camera2.ICameraDeviceCallbacks"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.hardware.input.InputManager",
+    "stubInterfaceList": [
+      "android.hardware.input.IInputManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.net.TrafficStats",
+    "stubInterfaceList": [
+      "android.net.INetworkStatsService"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.printservice.PrintDocument",
+    "stubInterfaceList": [
+      "android.printservice.IPrintServiceClient"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.telephony.PhoneStateListener",
+    "stubInterfaceList": [
+      "com.android.internal.telephony.IPhoneStateListener"
+    ]
+  },
+  {
+    "isImportant": true,
+    "serviceHelper": "android.net.wifi.passpoint.WifiPasspointManager",
+    "serviceName": "\"wifipasspoint\"",
+    "stubInterfaceList": [
+      "android.net.wifi.passpoint.IWifiPasspointManager"
+    ]
+  },
+  {
+    "isImportant": false,
+    "serviceHelper": "android.app.usage.NetworkStats",
+    "stubInterfaceList": [
+      "android.net.INetworkStatsSession"
+    ]
+  }
+]
