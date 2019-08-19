@@ -1,0 +1,7 @@
+{
+  "DEBUG": false,
+  "LOG_LEV": "info",
+  "ANDROID_JAR": "data/framework-lite.jar",
+  "PSCOUT_PATH": "data/pscout.txt",
+  "EDGE_MINER": "data/callbacks.txt"
+}
