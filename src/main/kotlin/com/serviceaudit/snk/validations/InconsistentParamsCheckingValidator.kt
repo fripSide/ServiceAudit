@@ -163,7 +163,6 @@ class InconsistentParamsCheckingValidator: IValidator {
     }
 
     // check if the parameters are getUserId or getPackageName
-    // todo use point-to analysis
     private fun checkVulType(call: ServiceMethod) {
         call.vulTag = VulnerableTags.FakeID
         val target = call.interfaceMtd.name
@@ -174,34 +173,33 @@ class InconsistentParamsCheckingValidator: IValidator {
             desc?.forEach { d ->
                 if (d.mtdName == target) {
                     d.params?.forEach { p ->
+//                        val sensitiveApiCalled = ParamsAssociateAnalysis.methodWordSynonymsAnalysis(p.paramName)
+//                        if (sensitiveApiCalled != "") {
+//                        }
                         paramsSet.add(p.paramType)
                     }
                     return@l1
                 }
             }
         }
-        if (!paramsSet.isEmpty()) {
-            paramsSet.forEach { s ->
-                val sensitiveApiCalled = ParamsAssociateAnalysis.methodWordSynonymsAnalysis(s)
-                if (sensitiveApiCalled != "") {
-                    DebugTool.exitHere()
-                }
-            }
 
-        }
         call.interfaceMtd.parameterTypes.forEach { t ->
             paramsSet.add(t.toString())
-//            println("adding $local")
+//            println("adding $t")
         }
-        val identifyTypes = hashSetOf("java.lang.String", "int")
-//        println(paramsSet)
-        var contains = false
-        paramsSet.forEach { s ->
-            if (identifyTypes.contains(s)) contains = true
-        }
-        if (!contains) {
+
+        if (isEnvMethod(paramsSet)) {
             call.vulTag = VulnerableTags.SysEnv
-//            DebugTool.exitHere()
         }
+    }
+
+    private fun isEnvMethod(paramsSet: HashSet<String>): Boolean {
+        val identifyTypes = hashSetOf("java.lang.String", "int")
+        paramsSet.forEach { v ->
+            if (identifyTypes.contains(v)) {
+                return false
+            }
+        }
+        return true
     }
 }

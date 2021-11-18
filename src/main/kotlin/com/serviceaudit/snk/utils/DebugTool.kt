@@ -7,7 +7,7 @@ object DebugTool {
 
     fun getLineInfo(outLev: Int = 0): String { // get first level of call stack
         val stacks = Throwable().stackTrace
-        val ste = stacks[2 + outLev]
+        val ste = stacks[1 + outLev]
         if (DEBUG) {
             return "[Source - Package:" + ste.className + ".java:" + ste.lineNumber + " Method:" + ste.methodName + "]"
         }

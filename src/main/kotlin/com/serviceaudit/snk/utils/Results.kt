@@ -19,7 +19,7 @@ object Results {
 
     val VUL_API = "vulnerable_api.json"
 
-    val REPORT = "report.txt"
+    val REPORT = "report_26.txt"
 
     init {
         if (!File(SAVE_DIR).exists()) {

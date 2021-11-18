@@ -20,6 +20,7 @@ object ServiceHelperExtractor {
 
     private val kServiceHelperRegisterCls: String = "android.app.SystemServiceRegistry"
     private val kServiceHelperRegisterFunc: String = "registerService"
+	private val kServiceCreateFuncSet = hashSetOf("createService", "getService")
     private val kServiceHelperCreateFunc = "createService"
     private val kGetServiceMtd = "<android.os.ServiceManager: android.os.IBinder getService(java.lang.String)>"
 
@@ -69,9 +70,6 @@ object ServiceHelperExtractor {
             }
         }
         val body = registerMtd?.retrieveActiveBody()
-        if (body == null) {
-            DebugTool.panic(Exception("ServiceRegisterClass Should Have cinit! $warnTag"))
-        }
 
         val helperApiList = HashSet<ServiceHelperClass>()
         var helperCnt = 0
@@ -122,12 +120,17 @@ object ServiceHelperExtractor {
         // find
         var createMtd: SootMethod? = null
         for (mtd in cls.methods) {
-            if (mtd.name == kServiceHelperCreateFunc && mtd.returnType.toString() != SootTool.OBJECT.name) {
+            if (mtd.name in kServiceCreateFuncSet && mtd.returnType.toString() != SootTool.OBJECT.name) {
                 createMtd = mtd
                 break
             }
         }
-        createMtd = createMtd!!
+        if (createMtd == null) {
+            LogNow.info(createMtd.toString())
+            DebugTool.exitHere(cls.toString())
+            return null
+        }
+
         val ret = SootTool.getReturnFromMethod(createMtd, true)
         val helper = SootTool.getClsFromValue(ret!!)
         val api = ServiceHelperClass(helper!!)
@@ -140,8 +143,8 @@ object ServiceHelperExtractor {
         // is service helper register block
         if (funcName == kServiceHelperRegisterFunc && invoke.argCount > 2 && invoke.args[1] is ClassConstant) {
             val blockCls = SootTool.getClsFromValue(invoke.args[2])
+//			println("resolve class: "+ blockCls)
             val api = extractServiceApiFromRegisterBlock(blockCls!!)
-            DebugTool.assert(api != null)
             if (api == null) {
                 val helper = getServiceHelperRegisterName(invoke)
                 if (helper != null)

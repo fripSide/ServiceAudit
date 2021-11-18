@@ -73,7 +73,7 @@ object ServiceMethodAnalysis {
         // change IPC call to real stub method
 
         //
-        return ImplicitControFlowResolver.checkAndResolveImplicitCall(mtd)
+        return ImplicitControlFlowResolver.checkAndResolveImplicitCall(mtd)
     }
 
 

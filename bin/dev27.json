@@ -1,0 +1,8 @@
+{
+  "DEBUG": true,
+  "LOG_LEV": "info",
+  "ANDROID_VERSION": "27",
+  "ANDROID_JAR": "E:\\PaperWork\\Finished\\JGRE\\AndroidApiExtract-master\\api-versions\\27\\framework-lite.jar",
+  "PSCOUT_PATH": "E:\\PaperWork\\Finished\\ServiceHelper\\ServiceAudit\\bin\\data\\pscout.txt",
+  "EDGE_MINER": "E:\\PaperWork\\Finished\\ServiceHelper\\ServiceAudit\\bin\\data\\callbacks.txt"
+}

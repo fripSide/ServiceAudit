@@ -1,6 +1,7 @@
 package com.serviceaudit.snk.services
 
 import com.serviceaudit.snk.CONFIG
+import com.serviceaudit.snk.utils.DebugTool
 import com.serviceaudit.snk.utils.LogNow
 import com.serviceaudit.snk.utils.SootTool
 import soot.*
@@ -42,34 +43,25 @@ class IPCExtractor {
 
     fun runAnalysis() {
         var cls = CONFIG.ANDROID_JAR
-//        cls = "E:\\PaperWork\\Android\\Jar\\cls"
+//        cls = "E:\\PaperWork\\AndroidTools\\Jar\\cls"
         SootTool.initSootSimply(CONFIG.CLASS_PATH, cls)
         LogNow.show("Input Classes: $cls")
 //        SootTool.initSootCallGraph(CONFIG.CLASS_PATH, cls, true)
 //        SootTool.dumpClass("android.os.IBinder")
 //        DebugTool.exitHere("dump class")
-
-        checkIntegrityOfFrameworkJar()
+//		PackManager.v().writeOutput()
         extractServiceImpl()
         extractServiceHelper()
 
+        // write jimple files for debug
 //        SootTool.printSootClasses()
 //        PackManager.v().writeOutput()
     }
 
-    //
-    private fun extractServiceImpl() {
-        val implList = ServiceImplExtractor.getServiceImplClass()
-        val allStubInFramework = ServiceImplExtractor.getAllStubClassInFramework()
-        val allStubInSdk = ServiceImplExtractor.getAllStubClassInSdk()
-        implList.forEach { impl ->
-            ServiceImplExtractor.setStubInterfaceFromImpl(impl)
-        }
-        serviceApi.addServiceStubsAndImplClass(implList, allStubInFramework, allStubInSdk)
-    }
-
     private fun extractServiceHelper() {
         val allList = ServiceHelperExtractor.getAllServiceHelperInSdk()
+        println(allList)
+//        DebugTool.exitHere("extractServiceHelper")
         val importantList = ServiceHelperExtractor.getImportantServiceHelper()
 //        println(importantList.size) // 68
         serviceApi.serviceHelperSet.addAll(allList)
@@ -87,25 +79,15 @@ class IPCExtractor {
         serviceApi.serviceHelperSet.addAll(importantList)
     }
 
-    private fun analysisServiceImplUsage() {
-        val implList = serviceApi.getImplClsList()
+    //
+    private fun extractServiceImpl() {
+        val implList = ServiceImplExtractor.getServiceImplClass()
+        val allStubInFramework = ServiceImplExtractor.getAllStubClassInFramework()
+        val allStubInSdk = ServiceImplExtractor.getAllStubClassInSdk()
         implList.forEach { impl ->
             ServiceImplExtractor.setStubInterfaceFromImpl(impl)
-            val clsList = extractImplUsageInSdk(impl)
-            for (cls in clsList) {
-//                impl.serviceHelperSet.add(cls)
-            }
         }
-    }
-
-    private fun checkIntegrityOfFrameworkJar() {
-
-    }
-
-    private fun extractImplUsageInSdk(impl: ServiceImplClass): HashSet<SootClass> {
-        val helperSet = HashSet<SootClass>()
-
-        return helperSet
+        serviceApi.addServiceStubsAndImplClass(implList, allStubInFramework, allStubInSdk)
     }
 
     fun saveResults() {

@@ -28,10 +28,16 @@ fun runAnalysis() {
         }
         else -> { // run all
             val serviceApi = runIpcExtractor()
-            runNlpApproach(serviceApi)
+//            runNlpApproach(serviceApi)
             runVulnerabilitiesAnalysis(serviceApi)
         }
     }
+}
+
+fun setAPILev(api: Int) {
+    CONFIG.ANDROID_JAR = CONFIG.ANDROID_JAR + api + "\\" + CONFIG.JAR
+    CONFIG.ANDROID_VERSION = api
+    println("Run API version: " + CONFIG.ANDROID_JAR)
 }
 
 lateinit var CONFIG: Conf
@@ -51,6 +57,12 @@ open class Main {
                 CONFIG = Conf()
                 DebugTool.fatalError("Failed to parse Conf file: $confPath!", ex)
             }
+            var apiLev = CONFIG.ANDROID_VERSION
+            if (args.size >= 2) {
+                apiLev = args[1].toInt()
+            }
+
+            setAPILev(apiLev)
             LogNow.setLogLevel()
             showDocument()
             ArgsParser.parseArgs(args)

@@ -1,6 +1,7 @@
 package com.serviceaudit.snk.analysis
 
 import com.serviceaudit.snk.services.ServiceMethod
+import com.serviceaudit.snk.utils.DebugTool
 import com.serviceaudit.snk.utils.SootTool
 import soot.SootMethod
 import soot.jimple.InvokeExpr
@@ -40,8 +41,14 @@ class CallGraphBuilder(val start: SootMethod, val targetSet: HashSet<SootMethod>
                 if (box.value is InvokeExpr) {
                     val expr = box.value as InvokeExpr
                     try {
-                        val curMtd = expr.method
+                        var curMtd = expr.method
                         // handle implicit call
+                        if (ImplicitControlFlowResolver.isImplicitCall(expr)) {
+                            val implicitCalls = ImplicitControlFlowResolver.checkAndResolveImplicitCall(curMtd)
+                            if (implicitCalls.isNotEmpty()) { // just need to choose one as the interface
+                                curMtd = implicitCalls[0]
+                            }
+                        }
 
                         if (methodNameSet.contains(curMtd.subSignature)) {
                             val called = getCalledMethod(curMtd.name)!!

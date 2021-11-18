@@ -7,7 +7,7 @@ import java.lang.StringBuilder
 
 object Statistics {
 
-    val save_path = "report.txt"
+    val save_path = "report_26.txt"
 
     var vulResults = HashSet<VulServiceApi>()
 

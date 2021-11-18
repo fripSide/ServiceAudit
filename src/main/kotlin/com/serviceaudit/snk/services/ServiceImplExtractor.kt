@@ -337,7 +337,10 @@ object ServiceImplExtractor {
     fun setStubInterfaceFromImpl(impl: ServiceImplClass) {
         val cls  = impl.serviceImpl
         impl.interfaceImplClass = SootTool.getInfForImpl(cls)
-//        println(impl.interfaceImplClass)
+        if (cls.isInterface) {
+            impl.interfaceImplClass = cls
+            return
+        }
         val hir = Scene.v().activeHierarchy
         val supList = hir.getSuperclassesOf(cls)
         supList.forEach { sup -> // stub

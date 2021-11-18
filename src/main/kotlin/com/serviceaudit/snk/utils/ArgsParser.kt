@@ -21,11 +21,11 @@ object ArgsParser {
 
     fun parseArgs(args: Array<String>) {
         if (args.size < 2 || args.size > 3) {
-            printHelp()
+//            printHelp()
             LogNow.show("Start to run all of the approaches...")
             return
         }
-        val opt = args[2]
+        val opt = args[1]
         for (key in options.keys) {
             if (opt == key) {
                 val action = options[key]!!
@@ -36,7 +36,7 @@ object ArgsParser {
     }
 
     fun printHelp() {
-        LogNow.show("Usage: run.sh -mode")
+        LogNow.show("Usage: ServiceAudit.jar conf api -mode")
         options.forEach{ opt ->
             LogNow.show("\t${opt.key} ${opt.value.desc}")
         }

@@ -73,6 +73,7 @@ class IpcFloodValidator(override val tag: String = "IpcFloodValidator", override
     // if the Stub is saved in list.
     // remove from list will not cause to crash
     private fun checkPutInList(mtd: SootMethod, inf: SootMethod): Boolean {
+        // in Android 6, all binder callback and listener methods suffer the Binder creating DoS attack
         val callbackMethod = hashSetOf("callback", "listener")
         val excludeMethod = hashSetOf("remove", "unregister")
         val nameList = ParamsAssociateAnalysis.splitWord(inf.name)

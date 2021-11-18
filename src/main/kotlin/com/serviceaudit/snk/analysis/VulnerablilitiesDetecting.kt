@@ -76,7 +76,9 @@ class VulnerabilitiesDetecting(private var serviceApi: ServiceApi) {
             infSet.add(api.helperClass!!.name)
             val helperName = api.helperClass!!.name
 //            if (!helperName.endsWith(focus)) return@l1
-            validateOneApi(api)
+            if (api.implMethod != null && !api.implClass!!.isInterface) {
+                validateOneApi(api)
+            }
 //            println("Analysis focus class $helperName ${api.interfaceMtd}")
 //            DebugTool.exitHere()
         }

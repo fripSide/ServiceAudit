@@ -118,7 +118,7 @@ class ServiceMethod(m: SootMethod) {
 
     // add to enforce list
     fun checkImplMethodNeedPermission(): Boolean {
-        if (interfaceMtd == implMethod) return false
+        if (interfaceMtd == implMethod || implMethod == null) return false
         analysisImplementApiPermission(implMethod!!)
         return enforcementList.isNotEmpty()
     }

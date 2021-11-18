@@ -308,7 +308,7 @@ object ParamsAssociateAnalysis {
 //            "enforce package" to hashSetOf("check", "Package")
     )
 
-    val permissionEnforceApi = hashSetOf("enforceAccessPermission", "enforceCallingOrSelfPermission")
+    val permissionEnforceApi = hashSetOf("enforceAccessPermission", "enforceCallingOrSelfPermission", "checkCallerIsSystemOrSameApp")
 
     val sensitiveApiMatch = hashMapOf<String, HashSet<String>>(
             "identity checking" to hashSetOf("uid", "pid", "gid", "ppid", "getPackageName", "getOpPackageName"),

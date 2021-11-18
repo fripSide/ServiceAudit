@@ -98,7 +98,7 @@ class IllegalParameterValidator(override val tag: String = "IllegalParameterVali
                 }
             }
         }
-        DebugTool.exitHere()
+//        DebugTool.exitHere()
 
         body?.locals?.forEach { local ->
 //            val tag = local.getTag("LineNumberTag") as LineNumberTag
