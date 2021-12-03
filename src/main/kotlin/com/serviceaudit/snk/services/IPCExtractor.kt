@@ -49,7 +49,9 @@ class IPCExtractor {
 //        SootTool.initSootCallGraph(CONFIG.CLASS_PATH, cls, true)
 //        SootTool.dumpClass("android.os.IBinder")
 //        DebugTool.exitHere("dump class")
+
 //		PackManager.v().writeOutput()
+//		extractServiceChildCls()
         extractServiceImpl()
         extractServiceHelper()
 
@@ -58,9 +60,13 @@ class IPCExtractor {
 //        PackManager.v().writeOutput()
     }
 
+	private fun extractServiceChildCls() {
+//		S
+	}
+
     private fun extractServiceHelper() {
         val allList = ServiceHelperExtractor.getAllServiceHelperInSdk()
-        println(allList)
+//        println(allList)
 //        DebugTool.exitHere("extractServiceHelper")
         val importantList = ServiceHelperExtractor.getImportantServiceHelper()
 //        println(importantList.size) // 68

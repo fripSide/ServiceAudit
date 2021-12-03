@@ -152,10 +152,22 @@ object ServiceImplExtractor {
 
     private fun findAddServiceList(): List<SootClass> {
         val clsList = mutableListOf<SootClass>()
+		val mtdList = mutableListOf<SootMethod>()
+//		Scene.v().applicationClasses.forEach { cls ->
+//			cls.methods.forEach { mtd ->
+//				mtdList.add(mtd)
+////				val body = SootTool.tryGetMethodBody(mtd)
+//			}
+//		}
+//		for (mtd in mtdList) {
+//			val body = SootTool.tryGetMethodBody(mtd)
+//		}
+
         Scene.v().applicationClasses.forEach { cls ->
             if (cls.name.startsWith("com.android") && cls.isConcrete) {
                 if (SootTool.checkClsContainsMethodCall(cls, kServiceImplAddMtdName, kServiceImplAddClsName)) {
-                    clsList.add(cls)
+					clsList.add(cls)
+//					DebugTool.exitHere(cls.name)
                 }
             }
         }
