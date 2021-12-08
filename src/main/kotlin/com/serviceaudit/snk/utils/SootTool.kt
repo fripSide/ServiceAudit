@@ -155,6 +155,16 @@ object SootTool {
         return null
     }
 
+	fun filterClass(prefix: String): List<SootClass> {
+		val classes = arrayListOf<SootClass>()
+		for (cls in Scene.v().applicationClasses) {
+			if (cls.isConcrete && cls.name.startsWith(prefix)) {
+				classes.add(cls)
+			}
+		}
+		return classes
+	}
+
     fun getClsFromType(type: Type): SootClass? {
         if (type is RefType) {
             return type.sootClass
@@ -249,28 +259,32 @@ object SootTool {
     }
 
     fun checkClsContainsMethodCall(cls: SootClass, mtdName: String, clsName: String? = null): Boolean {
-        for (mtd in cls.methods) {
-            val body = SootTool.tryGetMethodBody(mtd)
-            body?.useBoxes?.forEach { box ->
-                if (box.value is InvokeExpr) {
-                    val expr = box.value as InvokeExpr
-                    try {
-                        val curMtd = expr.method
-                        val sc = curMtd.declaringClass
-                        if (curMtd.name == mtdName) {
-                            if (clsName != null) {
-                                if (clsName == sc.name)
-                                    return true
-                            } else {
-                                return true
-                            }
-                        }
-                    } catch (ex: Exception) {
-//                        LogNow.warn("Failed to get method of $expr")
-                    }
-                }
-            }
-        }
+		var nmtd = arrayListOf<SootMethod>()
+		for (mtd in cls.methods) {
+			nmtd.add(mtd)
+		}
+		for (mtd in nmtd) {
+			val body = tryGetMethodBody(mtd)
+			body?.useBoxes?.forEach { box ->
+				if (box.value is InvokeExpr) {
+					val expr = box.value as InvokeExpr
+					try {
+						val curMtd = expr.method
+						val sc = curMtd.declaringClass
+						if (curMtd.name == mtdName) {
+							if (clsName != null) {
+								if (clsName == sc.name)
+									return true
+							} else {
+								return true
+							}
+						}
+					} catch (ex: Exception) {
+	//                        LogNow.warn("Failed to get method of $expr")
+					}
+				}
+			}
+		}
         return false
     }
 

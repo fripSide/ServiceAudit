@@ -99,6 +99,7 @@ object ServiceImplExtractor {
         for (cls in clsList) {
 //            val focus = "com.android.server.am.BatteryStatsService"
 //            if (cls.name != focus) continue
+//			var nc = cls.methods
             resolveServiceImplRegister(cls)
         }
     }
@@ -116,7 +117,7 @@ object ServiceImplExtractor {
 //        println("resolveServiceImplRegister $cls")
         val mtdSet = filterMethodContainCalls(cls, kServiceImplAddMtdName, kServiceImplAddClsName)
         var mtdCnt = 0
-        mtdSet.forEach{ mtd ->
+		cls.methods.forEach{ mtd ->
             val body = SootTool.tryGetMethodBody(mtd)
             body?.useBoxes?.forEach { box ->
                 if (box.value is InvokeExpr) {
@@ -126,6 +127,7 @@ object ServiceImplExtractor {
                     if (call.name == kServiceImplAddMtdName && callMtdCls.name == kServiceImplAddClsName) {
                         val name = expr.args[0].toString()
 //                        val implClass = resolveImplClassFromValue(expr.args[1], interfaceMtd)
+						println(expr)
                         var implClass = resolveServiceImplInMethod(expr.args[1], mtd)
                         if (implClass != null) {
                             implClass.serviceName = name
@@ -162,14 +164,12 @@ object ServiceImplExtractor {
 //		for (mtd in mtdList) {
 //			val body = SootTool.tryGetMethodBody(mtd)
 //		}
-
-        Scene.v().applicationClasses.forEach { cls ->
-            if (cls.name.startsWith("com.android") && cls.isConcrete) {
-                if (SootTool.checkClsContainsMethodCall(cls, kServiceImplAddMtdName, kServiceImplAddClsName)) {
-					clsList.add(cls)
+		val focusCls = SootTool.filterClass("com.android")
+		focusCls.forEach { cls ->
+			if (SootTool.checkClsContainsMethodCall(cls, kServiceImplAddMtdName, kServiceImplAddClsName)) {
+				clsList.add(cls)
 //					DebugTool.exitHere(cls.name)
-                }
-            }
+			}
         }
         return clsList
     }

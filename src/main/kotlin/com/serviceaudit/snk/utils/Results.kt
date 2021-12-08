@@ -17,6 +17,8 @@ object Results {
 
     val ASSOCIATE_METHODS = "associate_methods_mining.json"
 
+	val METHOD_PAIR= "ipc_methods.json"
+
     val VUL_API = "vulnerable_api.json"
 
     val REPORT = "report_26.txt"

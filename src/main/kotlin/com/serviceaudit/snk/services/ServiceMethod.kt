@@ -47,6 +47,8 @@ data class MethodDesc(var mtdName: String, var params: List<MethodParams>?) {
     }
 }
 
+data class MethodPaired(var helperCls: String, var implCls: String, var inf: String, var mtd: String)
+
 /*
 Method in Service helper: helperClass->calledMethod(call chain)->interfaceMtd (check for the whole call chain)
 Method in Service Impl: interfaceMtd->implClass->implMethod (check only one level)
@@ -155,4 +157,8 @@ class ServiceMethod(m: SootMethod) {
         }
         return VulServiceApi(interfaceMtd.signature, implMethod!!.signature, listOf(), bypass, enforce, vulTag, exceptionBypass, permissionBypass)
     }
+
+	fun asMethod(): MethodPaired {
+		return MethodPaired(helperClass?.name ?: "Null", implClass?.name ?: "Null", iInterface?.name ?: "Null", interfaceMtd.signature)
+	}
 }

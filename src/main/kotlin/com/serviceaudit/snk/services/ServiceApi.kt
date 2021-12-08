@@ -230,6 +230,17 @@ class ServiceApi {
         }
         LogNow.info("Total num of focus methods: ${entryPointMethodSet.size}")
 //        DebugTool.exitHere()
+
+		saveMethodPairs()
     }
+
+	fun saveMethodPairs() {
+		val mtds = arrayListOf<MethodPaired>()
+		entryPointMethodSet.forEach {
+			mtds.add(it.asMethod())
+		}
+		val data = Klaxon().toJsonString(mtds)
+		Results.saveResult(data, Results.METHOD_PAIR)
+	}
 
 }

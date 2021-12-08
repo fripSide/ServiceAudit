@@ -200,6 +200,8 @@ fun runVulnerabilitiesAnalysis(api: ServiceApi) {
     if (api.entryPointMethodSet.isEmpty()) {
         api.associateServiceMethods()
     }
+
+
     val vulDetect = VulnerabilitiesDetecting(api)
     vulDetect.runValidators()
     vulDetect.saveResults()

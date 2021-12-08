@@ -1,1 +1,2029 @@
-{"android.nfc.Tag": {"interfaceName" : "android.nfc.INfcTag", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.nfc.INfcTag: android.nfc.Tag rediscover(int)>", "serviceApi" : "<android.nfc.INfcTag: android.nfc.Tag rediscover(int)>", "vulType" : "Fake Status"}]}, "android.hardware.camera2.impl.CameraDeviceImpl": {"interfaceName" : "android.hardware.camera2.ICameraDeviceUser", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["submitCaptureRequest params[0] java.util.List: l1 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<android.hardware.camera2.ICameraDeviceUser: int submitRequestList(java.util.List,boolean,android.hardware.camera2.utils.LongParcelable)>", "serviceApi" : "<android.hardware.camera2.ICameraDeviceUser: int submitRequestList(java.util.List,boolean,android.hardware.camera2.utils.LongParcelable)>", "vulType" : "Illegal Parameter"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.hardware.camera2.ICameraDeviceUser: int createInputStream(int,int,int)>", "serviceApi" : "<android.hardware.camera2.ICameraDeviceUser: int createInputStream(int,int,int)>", "vulType" : "Fake Status"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.hardware.camera2.ICameraDeviceUser: int endConfigure(boolean)>", "serviceApi" : "<android.hardware.camera2.ICameraDeviceUser: int endConfigure(boolean)>", "vulType" : "Fake Status"}, {"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["tearDown params[0] int: l5 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<android.hardware.camera2.ICameraDeviceUser: int tearDown(int)>", "serviceApi" : "<android.hardware.camera2.ICameraDeviceUser: int tearDown(int)>", "vulType" : "Illegal Parameter"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.hardware.camera2.ICameraDeviceUser: int createStream(android.hardware.camera2.params.OutputConfiguration)>", "serviceApi" : "<android.hardware.camera2.ICameraDeviceUser: int createStream(android.hardware.camera2.params.OutputConfiguration)>", "vulType" : "Fake Status"}, {"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["prepare params[0] int: l5 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<android.hardware.camera2.ICameraDeviceUser: int prepare(int)>", "serviceApi" : "<android.hardware.camera2.ICameraDeviceUser: int prepare(int)>", "vulType" : "Illegal Parameter"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.hardware.camera2.ICameraDeviceUser: int waitUntilIdle()>", "serviceApi" : "<android.hardware.camera2.ICameraDeviceUser: int waitUntilIdle()>", "vulType" : "Fake Status"}]}, "android.app.AppOpsManager": {"interfaceName" : "com.android.internal.app.IAppOpsService", "vulApiList" : [{"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName", "getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.AppOpsService: int noteProxyOperation(int,java.lang.String,int,java.lang.String)>", "serviceApi" : "<com.android.internal.app.IAppOpsService: int noteProxyOperation(int,java.lang.String,int,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.AppOpsService: android.os.IBinder getToken(android.os.IBinder)>", "serviceApi" : "<com.android.internal.app.IAppOpsService: android.os.IBinder getToken(android.os.IBinder)>", "vulType" : "System Environment Evaluation"}]}, "android.print.PrintManager": {"interfaceName" : "android.print.IPrintManager", "vulApiList" : [{"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : ["android.permission.READ_PROFILE PScout Permission"], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.print.PrintManagerService$PrintManagerImpl: android.os.Bundle print(java.lang.String,android.print.IPrintDocumentAdapter,android.print.PrintAttributes,java.lang.String,int,int)>", "serviceApi" : "<android.print.IPrintManager: android.os.Bundle print(java.lang.String,android.print.IPrintDocumentAdapter,android.print.PrintAttributes,java.lang.String,int,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.print.PrintManagerService$PrintManagerImpl: void addPrintJobStateChangeListener(android.print.IPrintJobStateChangeListener,int,int)>", "serviceApi" : "<android.print.IPrintManager: void addPrintJobStateChangeListener(android.print.IPrintJobStateChangeListener,int,int)>", "vulType" : "IPC Flooding"}]}, "android.bluetooth.BluetoothHealth": {"interfaceName" : "android.bluetooth.IBluetoothHealth", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["params checking2: checkAppParam"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<android.bluetooth.IBluetoothHealth: boolean registerAppConfiguration(android.bluetooth.BluetoothHealthAppConfiguration,android.bluetooth.IBluetoothHealthCallback)>", "serviceApi" : "<android.bluetooth.IBluetoothHealth: boolean registerAppConfiguration(android.bluetooth.BluetoothHealthAppConfiguration,android.bluetooth.IBluetoothHealthCallback)>", "vulType" : "Illegal Parameter"}]}, "android.hardware.display.DisplayManagerGlobal": {"interfaceName" : "android.hardware.display.IDisplayManager", "vulApiList" : [{"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "exceptionList" : ["createVirtualDisplay params[6] int: l6 -> IllegalArgumentException"], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.display.DisplayManagerService$BinderService: int createVirtualDisplay(android.hardware.display.IVirtualDisplayCallback,android.media.projection.IMediaProjection,java.lang.String,java.lang.String,int,int,int,android.view.Surface,int)>", "serviceApi" : "<android.hardware.display.IDisplayManager: int createVirtualDisplay(android.hardware.display.IVirtualDisplayCallback,android.media.projection.IMediaProjection,java.lang.String,java.lang.String,int,int,int,android.view.Surface,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.display.DisplayManagerService$BinderService: void registerCallback(android.hardware.display.IDisplayManagerCallback)>", "serviceApi" : "<android.hardware.display.IDisplayManager: void registerCallback(android.hardware.display.IDisplayManagerCallback)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.display.DisplayManagerService$BinderService: void releaseVirtualDisplay(android.hardware.display.IVirtualDisplayCallback)>", "serviceApi" : "<android.hardware.display.IDisplayManager: void releaseVirtualDisplay(android.hardware.display.IVirtualDisplayCallback)>", "vulType" : "System Environment Evaluation"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.display.DisplayManagerService$BinderService: android.view.DisplayInfo getDisplayInfo(int)>", "serviceApi" : "<android.hardware.display.IDisplayManager: android.view.DisplayInfo getDisplayInfo(int)>", "vulType" : "Fake Identify"}]}, "android.media.projection.MediaProjectionManager": {"interfaceName" : "android.media.projection.IMediaProjectionManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.media.projection.MediaProjectionManagerService$BinderService: void addCallback(android.media.projection.IMediaProjectionWatcherCallback)>", "serviceApi" : "<android.media.projection.IMediaProjectionManager: void addCallback(android.media.projection.IMediaProjectionWatcherCallback)>", "vulType" : "IPC Flooding"}]}, "android.service.voice.VoiceInteractionSession": {"interfaceName" : "android.service.voice.IVoiceInteractionSession", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionFromSession(android.os.IBinder,android.os.Bundle,int)>", "serviceApi" : "<com.android.internal.app.IVoiceInteractionManagerService: boolean showSessionFromSession(android.os.IBinder,android.os.Bundle,int)>", "vulType" : "Fake Status"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean hideSessionFromSession(android.os.IBinder)>", "serviceApi" : "<com.android.internal.app.IVoiceInteractionManagerService: boolean hideSessionFromSession(android.os.IBinder)>", "vulType" : "Fake Status"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: void finish(android.os.IBinder)>", "serviceApi" : "<com.android.internal.app.IVoiceInteractionManagerService: void finish(android.os.IBinder)>", "vulType" : "Fake Status"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.service.voice.IVoiceInteractionSession: void closeSystemDialogs()>", "serviceApi" : "<android.service.voice.IVoiceInteractionSession: void closeSystemDialogs()>", "vulType" : "Fake Status"}]}, "android.app.WallpaperManager": {"interfaceName" : "android.app.IWallpaperManager", "vulApiList" : [{"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.wallpaper.WallpaperManagerService: boolean isWallpaperSupported(java.lang.String)>", "serviceApi" : "<android.app.IWallpaperManager: boolean isWallpaperSupported(java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.wallpaper.WallpaperManagerService: android.os.ParcelFileDescriptor getWallpaper(android.app.IWallpaperManagerCallback,android.os.Bundle)>", "serviceApi" : "<android.app.IWallpaperManager: android.os.ParcelFileDescriptor getWallpaper(android.app.IWallpaperManagerCallback,android.os.Bundle)>", "vulType" : "System Environment Evaluation"}]}, "android.media.session.MediaSession": {"interfaceName" : "android.media.session.ISession", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["setPlaybackToLocal params[0] android.media.AudioAttributes: l1 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<android.media.session.ISession: void setPlaybackToLocal(android.media.AudioAttributes)>", "serviceApi" : "<android.media.session.ISession: void setPlaybackToLocal(android.media.AudioAttributes)>", "vulType" : "Illegal Parameter"}]}, "android.app.UiAutomationConnection": {"interfaceName" : "android.view.accessibility.IAccessibilityManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["registerUiTestAutomationServiceLocked params[0] android.accessibilityservice.IAccessibilityServiceClient: l1 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<com.android.server.accessibility.AccessibilityManagerService: void registerUiTestAutomationService(android.os.IBinder,android.accessibilityservice.IAccessibilityServiceClient,android.accessibilityservice.AccessibilityServiceInfo)>", "serviceApi" : "<android.view.accessibility.IAccessibilityManager: void registerUiTestAutomationService(android.os.IBinder,android.accessibilityservice.IAccessibilityServiceClient,android.accessibilityservice.AccessibilityServiceInfo)>", "vulType" : "Illegal Parameter"}]}, "android.nfc.cardemulation.CardEmulation": {"interfaceName" : "android.nfc.INfcCardEmulation", "vulApiList" : [{"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.nfc.INfcCardEmulation: boolean registerAidGroupForService(int,android.content.ComponentName,android.nfc.cardemulation.AidGroup)>", "serviceApi" : "<android.nfc.INfcCardEmulation: boolean registerAidGroupForService(int,android.content.ComponentName,android.nfc.cardemulation.AidGroup)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.nfc.INfcCardEmulation: boolean setDefaultForNextTap(int,android.content.ComponentName)>", "serviceApi" : "<android.nfc.INfcCardEmulation: boolean setDefaultForNextTap(int,android.content.ComponentName)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.nfc.INfcCardEmulation: android.nfc.cardemulation.AidGroup getAidGroupForService(int,android.content.ComponentName,java.lang.String)>", "serviceApi" : "<android.nfc.INfcCardEmulation: android.nfc.cardemulation.AidGroup getAidGroupForService(int,android.content.ComponentName,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.nfc.INfcCardEmulation: boolean isDefaultServiceForAid(int,android.content.ComponentName,java.lang.String)>", "serviceApi" : "<android.nfc.INfcCardEmulation: boolean isDefaultServiceForAid(int,android.content.ComponentName,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.nfc.INfcCardEmulation: boolean setDefaultServiceForCategory(int,android.content.ComponentName,java.lang.String)>", "serviceApi" : "<android.nfc.INfcCardEmulation: boolean setDefaultServiceForCategory(int,android.content.ComponentName,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.nfc.INfcCardEmulation: java.util.List getServices(int,java.lang.String)>", "serviceApi" : "<android.nfc.INfcCardEmulation: java.util.List getServices(int,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.nfc.INfcCardEmulation: boolean removeAidGroupForService(int,android.content.ComponentName,java.lang.String)>", "serviceApi" : "<android.nfc.INfcCardEmulation: boolean removeAidGroupForService(int,android.content.ComponentName,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.nfc.INfcCardEmulation: boolean isDefaultServiceForCategory(int,android.content.ComponentName,java.lang.String)>", "serviceApi" : "<android.nfc.INfcCardEmulation: boolean isDefaultServiceForCategory(int,android.content.ComponentName,java.lang.String)>", "vulType" : "Fake Identify"}]}, "android.content.ClipboardManager": {"interfaceName" : "android.content.IClipboard", "vulApiList" : [{"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : ["getCallingUserId CallerCheckingEnforcement"], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.clipboard.ClipboardService: void addPrimaryClipChangedListener(android.content.IOnPrimaryClipChangedListener,java.lang.String)>", "serviceApi" : "<android.content.IClipboard: void addPrimaryClipChangedListener(android.content.IOnPrimaryClipChangedListener,java.lang.String)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.clipboard.ClipboardService: void setPrimaryClip(android.content.ClipData,java.lang.String)>", "serviceApi" : "<android.content.IClipboard: void setPrimaryClip(android.content.ClipData,java.lang.String)>", "vulType" : "Fake Identify"}]}, "android.hardware.input.InputManager": {"interfaceName" : "android.hardware.input.IInputManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.input.InputManagerService: void registerInputDevicesChangedListener(android.hardware.input.IInputDevicesChangedListener)>", "serviceApi" : "<android.hardware.input.IInputManager: void registerInputDevicesChangedListener(android.hardware.input.IInputDevicesChangedListener)>", "vulType" : "IPC Flooding"}]}, "android.net.ConnectivityManager": {"interfaceName" : "android.os.INetworkManagementService", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["unregisterNetworkActivityListener params[0] android.os.INetworkActivityListener: l2 -> IllegalArgumentException"], "failedValidatorList" : ["IpcFloodValidator", "IllegalParameterValidator"], "implApi" : "<com.android.server.NetworkManagementService: void unregisterNetworkActivityListener(android.os.INetworkActivityListener)>", "serviceApi" : "<android.os.INetworkManagementService: void unregisterNetworkActivityListener(android.os.INetworkActivityListener)>", "vulType" : "Illegal Parameter"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.NetworkManagementService: void registerNetworkActivityListener(android.os.INetworkActivityListener)>", "serviceApi" : "<android.os.INetworkManagementService: void registerNetworkActivityListener(android.os.INetworkActivityListener)>", "vulType" : "IPC Flooding"}]}, "android.media.midi.MidiManager": {"interfaceName" : "android.media.midi.IMidiManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.midi.MidiService: void registerListener(android.os.IBinder,android.media.midi.IMidiDeviceListener)>", "serviceApi" : "<android.media.midi.IMidiManager: void registerListener(android.os.IBinder,android.media.midi.IMidiDeviceListener)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.midi.MidiService: void unregisterListener(android.os.IBinder,android.media.midi.IMidiDeviceListener)>", "serviceApi" : "<android.media.midi.IMidiManager: void unregisterListener(android.os.IBinder,android.media.midi.IMidiDeviceListener)>", "vulType" : "IPC Flooding"}]}, "android.app.NotificationManager": {"interfaceName" : "android.app.INotificationManager", "vulApiList" : [{"checkingBypass" : ["myUserId Identify Checking: myUserId", "getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.app.INotificationManager: void cancelAllNotifications(java.lang.String,int)>", "serviceApi" : "<android.app.INotificationManager: void cancelAllNotifications(java.lang.String,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId", "getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.app.INotificationManager: void cancelNotificationWithTag(java.lang.String,java.lang.String,int,int)>", "serviceApi" : "<android.app.INotificationManager: void cancelNotificationWithTag(java.lang.String,java.lang.String,int,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName", "getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.app.INotificationManager: void enqueueNotificationWithTag(java.lang.String,java.lang.String,java.lang.String,int,android.app.Notification,int[],int)>", "serviceApi" : "<android.app.INotificationManager: void enqueueNotificationWithTag(java.lang.String,java.lang.String,java.lang.String,int,android.app.Notification,int[],int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.app.INotificationManager: android.app.NotificationManager$Policy getNotificationPolicy(java.lang.String)>", "serviceApi" : "<android.app.INotificationManager: android.app.NotificationManager$Policy getNotificationPolicy(java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.app.INotificationManager: void setInterruptionFilter(java.lang.String,int)>", "serviceApi" : "<android.app.INotificationManager: void setInterruptionFilter(java.lang.String,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId", "getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.app.INotificationManager: android.content.pm.ParceledListSlice getAppActiveNotifications(java.lang.String,int)>", "serviceApi" : "<android.app.INotificationManager: android.content.pm.ParceledListSlice getAppActiveNotifications(java.lang.String,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "exceptionList" : ["checkRequired params[0] java.lang.Object: l1 -> IllegalArgumentException"], "failedValidatorList" : ["InconsistentParamsCheckingValidator", "IllegalParameterValidator"], "implApi" : "<android.app.INotificationManager: void setNotificationPolicy(java.lang.String,android.app.NotificationManager$Policy)>", "serviceApi" : "<android.app.INotificationManager: void setNotificationPolicy(java.lang.String,android.app.NotificationManager$Policy)>", "vulType" : "Illegal Parameter"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.app.INotificationManager: boolean isNotificationPolicyAccessGranted(java.lang.String)>", "serviceApi" : "<android.app.INotificationManager: boolean isNotificationPolicyAccessGranted(java.lang.String)>", "vulType" : "Fake Identify"}]}, "android.net.NetworkPolicyManager": {"interfaceName" : "android.net.INetworkPolicyManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.net.NetworkPolicyManagerService: void registerListener(android.net.INetworkPolicyListener)>", "serviceApi" : "<android.net.INetworkPolicyManager: void registerListener(android.net.INetworkPolicyListener)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.net.NetworkPolicyManagerService: void unregisterListener(android.net.INetworkPolicyListener)>", "serviceApi" : "<android.net.INetworkPolicyManager: void unregisterListener(android.net.INetworkPolicyListener)>", "vulType" : "IPC Flooding"}]}, "android.hardware.fingerprint.FingerprintManager": {"interfaceName" : "android.hardware.fingerprint.IFingerprintService", "vulApiList" : [{"checkingBypass" : ["myUserId Identify Checking: myUserId", "getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.fingerprint.FingerprintService$FingerprintServiceWrapper: boolean hasEnrolledFingerprints(int,java.lang.String)>", "serviceApi" : "<android.hardware.fingerprint.IFingerprintService: boolean hasEnrolledFingerprints(int,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.fingerprint.FingerprintService$FingerprintServiceWrapper: java.util.List getEnrolledFingerprints(int,java.lang.String)>", "serviceApi" : "<android.hardware.fingerprint.IFingerprintService: java.util.List getEnrolledFingerprints(int,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.fingerprint.FingerprintService$FingerprintServiceWrapper: long getAuthenticatorId(java.lang.String)>", "serviceApi" : "<android.hardware.fingerprint.IFingerprintService: long getAuthenticatorId(java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.fingerprint.FingerprintService$FingerprintServiceWrapper: void cancelAuthentication(android.os.IBinder,java.lang.String)>", "serviceApi" : "<android.hardware.fingerprint.IFingerprintService: void cancelAuthentication(android.os.IBinder,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.fingerprint.FingerprintService$FingerprintServiceWrapper: boolean isHardwareDetected(long,java.lang.String)>", "serviceApi" : "<android.hardware.fingerprint.IFingerprintService: boolean isHardwareDetected(long,java.lang.String)>", "vulType" : "Fake Identify"}]}, "android.service.trust.TrustAgentService": {"interfaceName" : "android.service.trust.ITrustAgentServiceCallback", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.service.trust.ITrustAgentServiceCallback: void grantTrust(java.lang.CharSequence,long,int)>", "serviceApi" : "<android.service.trust.ITrustAgentServiceCallback: void grantTrust(java.lang.CharSequence,long,int)>", "vulType" : "Fake Status"}]}, "android.location.Geocoder": {"interfaceName" : "android.location.ILocationManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["getFromLocationName params[0] java.lang.String: l1 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<com.android.server.LocationManagerService: java.lang.String getFromLocationName(java.lang.String,double,double,double,double,int,android.location.GeocoderParams,java.util.List)>", "serviceApi" : "<android.location.ILocationManager: java.lang.String getFromLocationName(java.lang.String,double,double,double,double,int,android.location.GeocoderParams,java.util.List)>", "vulType" : "Illegal Parameter"}]}, "android.bluetooth.BluetoothGatt": {"interfaceName" : "android.bluetooth.IBluetoothGatt", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["connectionParameterUpdate params[2] int: l1 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<android.bluetooth.IBluetoothGatt: void connectionParameterUpdate(int,java.lang.String,int)>", "serviceApi" : "<android.bluetooth.IBluetoothGatt: void connectionParameterUpdate(int,java.lang.String,int)>", "vulType" : "Illegal Parameter"}]}, "android.content.pm.LauncherApps": {"interfaceName" : "android.content.pm.ILauncherApps", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.pm.LauncherAppsService$LauncherAppsImpl: void addOnAppsChangedListener(android.content.pm.IOnAppsChangedListener)>", "serviceApi" : "<android.content.pm.ILauncherApps: void addOnAppsChangedListener(android.content.pm.IOnAppsChangedListener)>", "vulType" : "IPC Flooding"}]}, "android.content.pm.PackageInstaller": {"interfaceName" : "android.content.pm.IPackageInstaller", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<android.content.pm.IPackageInstaller: void registerCallback(android.content.pm.IPackageInstallerCallback,int)>", "serviceApi" : "<android.content.pm.IPackageInstaller: void registerCallback(android.content.pm.IPackageInstallerCallback,int)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<android.content.pm.IPackageInstaller: void unregisterCallback(android.content.pm.IPackageInstallerCallback)>", "serviceApi" : "<android.content.pm.IPackageInstaller: void unregisterCallback(android.content.pm.IPackageInstallerCallback)>", "vulType" : "IPC Flooding"}]}, "android.hardware.display.DisplayManager": {"interfaceName" : "android.hardware.display.IDisplayManager", "vulApiList" : [{"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "exceptionList" : ["createVirtualDisplay params[6] int: l6 -> IllegalArgumentException"], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.display.DisplayManagerService$BinderService: int createVirtualDisplay(android.hardware.display.IVirtualDisplayCallback,android.media.projection.IMediaProjection,java.lang.String,java.lang.String,int,int,int,android.view.Surface,int)>", "serviceApi" : "<android.hardware.display.IDisplayManager: int createVirtualDisplay(android.hardware.display.IVirtualDisplayCallback,android.media.projection.IMediaProjection,java.lang.String,java.lang.String,int,int,int,android.view.Surface,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.display.DisplayManagerService$BinderService: void releaseVirtualDisplay(android.hardware.display.IVirtualDisplayCallback)>", "serviceApi" : "<android.hardware.display.IDisplayManager: void releaseVirtualDisplay(android.hardware.display.IVirtualDisplayCallback)>", "vulType" : "System Environment Evaluation"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.display.DisplayManagerService$BinderService: void registerCallback(android.hardware.display.IDisplayManagerCallback)>", "serviceApi" : "<android.hardware.display.IDisplayManager: void registerCallback(android.hardware.display.IDisplayManagerCallback)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.display.DisplayManagerService$BinderService: android.view.DisplayInfo getDisplayInfo(int)>", "serviceApi" : "<android.hardware.display.IDisplayManager: android.view.DisplayInfo getDisplayInfo(int)>", "vulType" : "Fake Identify"}]}, "android.media.MediaRouter": {"interfaceName" : "android.media.IAudioService", "vulApiList" : [{"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.media.MediaRouterService: void setSelectedRoute(android.media.IMediaRouterClient,java.lang.String,boolean)>", "serviceApi" : "<android.media.IMediaRouterService: void setSelectedRoute(android.media.IMediaRouterClient,java.lang.String,boolean)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.media.MediaRouterService: void unregisterClient(android.media.IMediaRouterClient)>", "serviceApi" : "<android.media.IMediaRouterService: void unregisterClient(android.media.IMediaRouterClient)>", "vulType" : "System Environment Evaluation"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.media.MediaRouterService: android.media.MediaRouterClientState getState(android.media.IMediaRouterClient)>", "serviceApi" : "<android.media.IMediaRouterService: android.media.MediaRouterClientState getState(android.media.IMediaRouterClient)>", "vulType" : "System Environment Evaluation"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.media.MediaRouterService: void setDiscoveryRequest(android.media.IMediaRouterClient,int,boolean)>", "serviceApi" : "<android.media.IMediaRouterService: void setDiscoveryRequest(android.media.IMediaRouterClient,int,boolean)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.audio.AudioService: void setBluetoothA2dpOn(boolean)>", "serviceApi" : "<android.media.IAudioService: void setBluetoothA2dpOn(boolean)>", "vulType" : "System Environment Evaluation"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.audio.AudioService: android.media.AudioRoutesInfo startWatchingRoutes(android.media.IAudioRoutesObserver)>", "serviceApi" : "<android.media.IAudioService: android.media.AudioRoutesInfo startWatchingRoutes(android.media.IAudioRoutesObserver)>", "vulType" : "System Environment Evaluation"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId", "getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.audio.AudioService: int getStreamVolume(int)>", "serviceApi" : "<android.media.IAudioService: int getStreamVolume(int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.audio.AudioService: int getStreamMaxVolume(int)>", "serviceApi" : "<android.media.IAudioService: int getStreamMaxVolume(int)>", "vulType" : "Fake Identify"}]}, "android.media.tv.TvInputManager": {"interfaceName" : "android.media.tv.ITvInputManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.tv.TvInputManagerService$BinderService: void registerCallback(android.media.tv.ITvInputManagerCallback,int)>", "serviceApi" : "<android.media.tv.ITvInputManager: void registerCallback(android.media.tv.ITvInputManagerCallback,int)>", "vulType" : "IPC Flooding"}]}, "android.media.session.MediaSessionManager": {"interfaceName" : "android.media.session.ISessionManager", "vulApiList" : [{"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : ["enforcePackageName CallerCheckingEnforcement", "android.permission.READ_PROFILE PScout Permission"], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.media.MediaSessionService$SessionManagerImpl: void addSessionsListener(android.media.session.IActiveSessionsListener,android.content.ComponentName,int)>", "serviceApi" : "<android.media.session.ISessionManager: void addSessionsListener(android.media.session.IActiveSessionsListener,android.content.ComponentName,int)>", "vulType" : "IPC Flooding"}]}, "android.location.LocationManager": {"interfaceName" : "android.location.ILocationManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["checkCriteria params[0] android.location.Criteria: l0 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<com.android.server.LocationManagerService: java.util.List getProviders(android.location.Criteria,boolean)>", "serviceApi" : "<android.location.ILocationManager: java.util.List getProviders(android.location.Criteria,boolean)>", "vulType" : "Illegal Parameter"}, {"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["checkCriteria params[0] android.location.Criteria: l0 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<com.android.server.LocationManagerService: java.lang.String getBestProvider(android.location.Criteria,boolean)>", "serviceApi" : "<android.location.ILocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)>", "vulType" : "Illegal Parameter"}, {"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["checkProvider params[0] java.lang.String: l0 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<com.android.server.LocationManagerService: boolean isProviderEnabled(java.lang.String)>", "serviceApi" : "<android.location.ILocationManager: boolean isProviderEnabled(java.lang.String)>", "vulType" : "Illegal Parameter"}, {"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["checkProvider params[0] java.lang.String: l0 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<com.android.server.LocationManagerService: com.android.internal.location.ProviderProperties getProviderProperties(java.lang.String)>", "serviceApi" : "<android.location.ILocationManager: com.android.internal.location.ProviderProperties getProviderProperties(java.lang.String)>", "vulType" : "Illegal Parameter"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : ["checkOp CallerCheckingEnforcement", "android.permission.ACCESS_FINE_LOCATION PScout Permission", "android.permission.ACCESS_COARSE_LOCATION PScout Permission"], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.LocationManagerService: boolean addGpsStatusListener(android.location.IGpsStatusListener,java.lang.String)>", "serviceApi" : "<android.location.ILocationManager: boolean addGpsStatusListener(android.location.IGpsStatusListener,java.lang.String)>", "vulType" : "IPC Flooding"}]}, "android.nfc.NfcAdapter": {"interfaceName" : "android.nfc.INfcAdapter", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<android.nfc.INfcAdapter: void setAppCallback(android.nfc.IAppCallback)>", "serviceApi" : "<android.nfc.INfcAdapter: void setAppCallback(android.nfc.IAppCallback)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.nfc.INfcAdapter: android.nfc.INfcAdapterExtras getNfcAdapterExtrasInterface(java.lang.String)>", "serviceApi" : "<android.nfc.INfcAdapter: android.nfc.INfcAdapterExtras getNfcAdapterExtrasInterface(java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.nfc.INfcAdapter: void setForegroundDispatch(android.app.PendingIntent,android.content.IntentFilter[],android.nfc.TechListParcel)>", "serviceApi" : "<android.nfc.INfcAdapter: void setForegroundDispatch(android.app.PendingIntent,android.content.IntentFilter[],android.nfc.TechListParcel)>", "vulType" : "Fake Status"}]}, "android.hardware.hdmi.HdmiControlManager": {"interfaceName" : "android.hardware.hdmi.IHdmiControlService", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.hdmi.HdmiControlService$BinderService: void addHotplugEventListener(android.hardware.hdmi.IHdmiHotplugEventListener)>", "serviceApi" : "<android.hardware.hdmi.IHdmiControlService: void addHotplugEventListener(android.hardware.hdmi.IHdmiHotplugEventListener)>", "vulType" : "IPC Flooding"}]}, "android.bluetooth.BluetoothDevice": {"interfaceName" : "android.bluetooth.IBluetooth", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.bluetooth.IBluetooth: java.lang.String getAddress()>", "serviceApi" : "<android.bluetooth.IBluetooth: java.lang.String getAddress()>", "vulType" : "Fake Status"}, {"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["createBond params[1] int: l1 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<android.bluetooth.IBluetooth: boolean createBond(android.bluetooth.BluetoothDevice,int)>", "serviceApi" : "<android.bluetooth.IBluetooth: boolean createBond(android.bluetooth.BluetoothDevice,int)>", "vulType" : "Illegal Parameter"}]}, "android.media.midi.MidiDevice": {"interfaceName" : "android.media.midi.IMidiDeviceServer", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["connectPorts params[2] int: l2 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<android.media.midi.IMidiDeviceServer: void connectPorts(android.os.IBinder,android.os.ParcelFileDescriptor,int)>", "serviceApi" : "<android.media.midi.IMidiDeviceServer: void connectPorts(android.os.IBinder,android.os.ParcelFileDescriptor,int)>", "vulType" : "Illegal Parameter"}]}, "android.security.KeyStore": {"interfaceName" : "android.security.IKeystoreService", "vulApiList" : [{"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.security.IKeystoreService: int lock(int)>", "serviceApi" : "<android.security.IKeystoreService: int lock(int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.security.IKeystoreService: int getState(int)>", "serviceApi" : "<android.security.IKeystoreService: int getState(int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.security.IKeystoreService: int isEmpty(int)>", "serviceApi" : "<android.security.IKeystoreService: int isEmpty(int)>", "vulType" : "Fake Identify"}]}, "android.net.EthernetManager": {"interfaceName" : "android.net.IEthernetManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<android.net.IEthernetManager: void addListener(android.net.IEthernetServiceListener)>", "serviceApi" : "<android.net.IEthernetManager: void addListener(android.net.IEthernetServiceListener)>", "vulType" : "IPC Flooding"}]}, "android.service.wallpaper.WallpaperService$Engine": {"interfaceName" : "android.view.IWindowSession", "vulApiList" : [{"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.service.wallpaper.IWallpaperConnection: void engineShown(android.service.wallpaper.IWallpaperEngine)>", "serviceApi" : "<android.service.wallpaper.IWallpaperConnection: void engineShown(android.service.wallpaper.IWallpaperEngine)>", "vulType" : "System Environment Evaluation"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.view.IWindowSession: int addToDisplay(android.view.IWindow,int,android.view.WindowManager$LayoutParams,int,int,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.view.InputChannel)>", "serviceApi" : "<android.view.IWindowSession: int addToDisplay(android.view.IWindow,int,android.view.WindowManager$LayoutParams,int,int,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.view.InputChannel)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.view.IWindowSession: void finishDrawing(android.view.IWindow)>", "serviceApi" : "<android.view.IWindowSession: void finishDrawing(android.view.IWindow)>", "vulType" : "System Environment Evaluation"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.view.IWindowSession: int relayout(android.view.IWindow,int,android.view.WindowManager$LayoutParams,int,int,int,int,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.content.res.Configuration,android.view.Surface)>", "serviceApi" : "<android.view.IWindowSession: int relayout(android.view.IWindow,int,android.view.WindowManager$LayoutParams,int,int,int,int,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.content.res.Configuration,android.view.Surface)>", "vulType" : "Fake Identify"}]}, "android.view.inputmethod.InputMethodManager": {"interfaceName" : "com.android.internal.view.IInputMethodSession", "vulApiList" : [{"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.internal.view.IInputMethodSession: void displayCompletions(android.view.inputmethod.CompletionInfo[])>", "serviceApi" : "<com.android.internal.view.IInputMethodSession: void displayCompletions(android.view.inputmethod.CompletionInfo[])>", "vulType" : "System Environment Evaluation"}]}, "android.media.AudioManager": {"interfaceName" : "android.media.IAudioService", "vulApiList" : [{"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.audio.AudioService: void setStreamVolume(int,int,int,java.lang.String)>", "serviceApi" : "<android.media.IAudioService: void setStreamVolume(int,int,int,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.audio.AudioService: void setRingerModeExternal(int,java.lang.String)>", "serviceApi" : "<android.media.IAudioService: void setRingerModeExternal(int,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.audio.AudioService: void setWiredDeviceConnectionState(int,int,java.lang.String,java.lang.String,java.lang.String)>", "serviceApi" : "<android.media.IAudioService: void setWiredDeviceConnectionState(int,int,java.lang.String,java.lang.String,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.audio.AudioService: void adjustStreamVolume(int,int,int,java.lang.String)>", "serviceApi" : "<android.media.IAudioService: void adjustStreamVolume(int,int,int,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.audio.AudioService: boolean isValidRingerMode(int)>", "serviceApi" : "<android.media.IAudioService: boolean isValidRingerMode(int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : ["checkCallingOrSelfPermission CallerCheckingEnforcement"], "exceptionList" : ["requestAudioFocus params[6] int: l4 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<com.android.server.audio.AudioService: int requestAudioFocus(android.media.AudioAttributes,int,android.os.IBinder,android.media.IAudioFocusDispatcher,java.lang.String,java.lang.String,int,android.media.audiopolicy.IAudioPolicyCallback)>", "serviceApi" : "<android.media.IAudioService: int requestAudioFocus(android.media.AudioAttributes,int,android.os.IBinder,android.media.IAudioFocusDispatcher,java.lang.String,java.lang.String,int,android.media.audiopolicy.IAudioPolicyCallback)>", "vulType" : "Illegal Parameter"}]}, "android.view.accessibility.AccessibilityManager": {"interfaceName" : "android.view.accessibility.IAccessibilityManager", "vulApiList" : [{"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.accessibility.AccessibilityManagerService: int addClient(android.view.accessibility.IAccessibilityManagerClient,int)>", "serviceApi" : "<android.view.accessibility.IAccessibilityManager: int addClient(android.view.accessibility.IAccessibilityManagerClient,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<com.android.server.accessibility.AccessibilityManagerService: void interrupt(int)>", "serviceApi" : "<android.view.accessibility.IAccessibilityManager: void interrupt(int)>", "vulType" : "Fake Status"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<com.android.server.accessibility.AccessibilityManagerService: boolean sendAccessibilityEvent(android.view.accessibility.AccessibilityEvent,int)>", "serviceApi" : "<android.view.accessibility.IAccessibilityManager: boolean sendAccessibilityEvent(android.view.accessibility.AccessibilityEvent,int)>", "vulType" : "Fake Status"}]}, "android.bluetooth.BluetoothHeadset": {"interfaceName" : "android.bluetooth.IBluetoothHeadset", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["sendVendorSpecificResultCode params[1] java.lang.String: l2 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<android.bluetooth.IBluetoothHeadset: boolean sendVendorSpecificResultCode(android.bluetooth.BluetoothDevice,java.lang.String,java.lang.String)>", "serviceApi" : "<android.bluetooth.IBluetoothHeadset: boolean sendVendorSpecificResultCode(android.bluetooth.BluetoothDevice,java.lang.String,java.lang.String)>", "vulType" : "Illegal Parameter"}]}, "android.media.browse.MediaBrowser": {"interfaceName" : "android.service.media.IMediaBrowserService", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["addSubscription params[0] java.lang.String: l1 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<android.service.media.IMediaBrowserService: void addSubscription(java.lang.String,android.service.media.IMediaBrowserServiceCallbacks)>", "serviceApi" : "<android.service.media.IMediaBrowserService: void addSubscription(java.lang.String,android.service.media.IMediaBrowserServiceCallbacks)>", "vulType" : "Illegal Parameter"}]}, "android.app.admin.DevicePolicyManager": {"interfaceName" : "android.app.admin.IDevicePolicyManager", "vulApiList" : [{"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : ["android.permission.READ_PROFILE PScout Permission"], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.devicepolicy.DevicePolicyManagerService: int getCurrentFailedPasswordAttempts(int)>", "serviceApi" : "<android.app.admin.IDevicePolicyManager: int getCurrentFailedPasswordAttempts(int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : ["android.permission.READ_PROFILE PScout Permission", "android.permission.READ_PROFILE PScout Permission"], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.devicepolicy.DevicePolicyManagerService: boolean getCameraDisabled(android.content.ComponentName,int)>", "serviceApi" : "<android.app.admin.IDevicePolicyManager: boolean getCameraDisabled(android.content.ComponentName,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : ["android.permission.READ_PROFILE PScout Permission", "android.permission.READ_PROFILE PScout Permission"], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.devicepolicy.DevicePolicyManagerService: boolean getScreenCaptureDisabled(android.content.ComponentName,int)>", "serviceApi" : "<android.app.admin.IDevicePolicyManager: boolean getScreenCaptureDisabled(android.content.ComponentName,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.devicepolicy.DevicePolicyManagerService: android.content.ComponentName getProfileOwner(int)>", "serviceApi" : "<android.app.admin.IDevicePolicyManager: android.content.ComponentName getProfileOwner(int)>", "vulType" : "Fake Identify"}]}, "android.widget.Toast": {"interfaceName" : "android.app.INotificationManager", "vulApiList" : [{"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.app.INotificationManager: void enqueueToast(java.lang.String,android.app.ITransientNotification,int)>", "serviceApi" : "<android.app.INotificationManager: void enqueueToast(java.lang.String,android.app.ITransientNotification,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.app.INotificationManager: void cancelToast(java.lang.String,android.app.ITransientNotification)>", "serviceApi" : "<android.app.INotificationManager: void cancelToast(java.lang.String,android.app.ITransientNotification)>", "vulType" : "Fake Identify"}]}, "android.media.session.MediaController": {"interfaceName" : "android.media.session.ISessionController", "vulApiList" : [{"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.media.session.ISessionController: void adjustVolume(int,int,java.lang.String)>", "serviceApi" : "<android.media.session.ISessionController: void adjustVolume(int,int,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<android.media.session.ISessionController: void unregisterCallbackListener(android.media.session.ISessionControllerCallback)>", "serviceApi" : "<android.media.session.ISessionController: void unregisterCallbackListener(android.media.session.ISessionControllerCallback)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<android.media.session.ISessionController: void registerCallbackListener(android.media.session.ISessionControllerCallback)>", "serviceApi" : "<android.media.session.ISessionController: void registerCallbackListener(android.media.session.ISessionControllerCallback)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.media.session.ISessionController: void setVolumeTo(int,int,java.lang.String)>", "serviceApi" : "<android.media.session.ISessionController: void setVolumeTo(int,int,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["sendMediaButton params[0] android.view.KeyEvent: l1 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<android.media.session.ISessionController: boolean sendMediaButton(android.view.KeyEvent)>", "serviceApi" : "<android.media.session.ISessionController: boolean sendMediaButton(android.view.KeyEvent)>", "vulType" : "Illegal Parameter"}]}, "android.net.wifi.RttManager": {"interfaceName" : "android.net.wifi.IRttManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<com.android.server.wifi.RttService$RttServiceImpl: android.net.wifi.RttManager$RttCapabilities getRttCapabilities()>", "serviceApi" : "<android.net.wifi.IRttManager: android.net.wifi.RttManager$RttCapabilities getRttCapabilities()>", "vulType" : "Fake Status"}]}, "android.location.CountryDetector": {"interfaceName" : "android.location.ICountryDetector", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.CountryDetectorService: void addCountryListener(android.location.ICountryListener)>", "serviceApi" : "<android.location.ICountryDetector: void addCountryListener(android.location.ICountryListener)>", "vulType" : "IPC Flooding"}]}, "android.media.tv.TvInputManager$Session": {"interfaceName" : "android.media.tv.ITvInputManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["selectTrack params[1] int: l1 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<com.android.server.tv.TvInputManagerService$BinderService: void selectTrack(android.os.IBinder,int,java.lang.String,int)>", "serviceApi" : "<android.media.tv.ITvInputManager: void selectTrack(android.os.IBinder,int,java.lang.String,int)>", "vulType" : "Illegal Parameter"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<com.android.server.tv.TvInputManagerService$BinderService: void createOverlayView(android.os.IBinder,android.os.IBinder,android.graphics.Rect,int)>", "serviceApi" : "<android.media.tv.ITvInputManager: void createOverlayView(android.os.IBinder,android.os.IBinder,android.graphics.Rect,int)>", "vulType" : "Fake Status"}]}, "android.os.storage.StorageManager": {"interfaceName" : "android.os.storage.IMountService", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.MountService: void unregisterListener(android.os.storage.IMountServiceListener)>", "serviceApi" : "<android.os.storage.IMountService: void unregisterListener(android.os.storage.IMountServiceListener)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.MountService: void registerListener(android.os.storage.IMountServiceListener)>", "serviceApi" : "<android.os.storage.IMountService: void registerListener(android.os.storage.IMountServiceListener)>", "vulType" : "IPC Flooding"}]}, "android.service.voice.VoiceInteractionService": {"interfaceName" : "com.android.internal.app.IVoiceInteractionManagerService", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: void showSession(android.service.voice.IVoiceInteractionService,android.os.Bundle,int)>", "serviceApi" : "<com.android.internal.app.IVoiceInteractionManagerService: void showSession(android.service.voice.IVoiceInteractionService,android.os.Bundle,int)>", "vulType" : "Fake Status"}]}, "android.app.trust.TrustManager": {"interfaceName" : "android.app.trust.ITrustManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<android.app.trust.ITrustManager: void registerTrustListener(android.app.trust.ITrustListener)>", "serviceApi" : "<android.app.trust.ITrustManager: void registerTrustListener(android.app.trust.ITrustListener)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<android.app.trust.ITrustManager: void unregisterTrustListener(android.app.trust.ITrustListener)>", "serviceApi" : "<android.app.trust.ITrustManager: void unregisterTrustListener(android.app.trust.ITrustListener)>", "vulType" : "IPC Flooding"}]}, "android.bluetooth.BluetoothAdapter": {"interfaceName" : "android.bluetooth.IBluetoothManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.BluetoothManagerService: void unregisterStateChangeCallback(android.bluetooth.IBluetoothStateChangeCallback)>", "serviceApi" : "<android.bluetooth.IBluetoothManager: void unregisterStateChangeCallback(android.bluetooth.IBluetoothStateChangeCallback)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<com.android.server.BluetoothManagerService: void registerStateChangeCallback(android.bluetooth.IBluetoothStateChangeCallback)>", "serviceApi" : "<android.bluetooth.IBluetoothManager: void registerStateChangeCallback(android.bluetooth.IBluetoothStateChangeCallback)>", "vulType" : "IPC Flooding"}]}, "android.app.AlarmManager": {"interfaceName" : "android.app.IAlarmManager", "vulApiList" : [{"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<android.app.IAlarmManager: android.app.AlarmManager$AlarmClockInfo getNextAlarmClock(int)>", "serviceApi" : "<android.app.IAlarmManager: android.app.AlarmManager$AlarmClockInfo getNextAlarmClock(int)>", "vulType" : "Fake Identify"}]}, "android.app.ActivityThread": {"interfaceName" : "android.content.pm.IPackageManager", "vulApiList" : [{"checkingBypass" : ["getPackageName identity checking: getPackageName", "myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.pm.PackageManagerService: android.content.pm.InstrumentationInfo getInstrumentationInfo(android.content.ComponentName,int)>", "serviceApi" : "<android.content.pm.IPackageManager: android.content.pm.InstrumentationInfo getInstrumentationInfo(android.content.ComponentName,int)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.pm.PackageManagerService: boolean performDexOptIfNeeded(java.lang.String,java.lang.String)>", "serviceApi" : "<android.content.pm.IPackageManager: boolean performDexOptIfNeeded(java.lang.String,java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.pm.PackageManagerService: boolean hasSystemFeature(java.lang.String)>", "serviceApi" : "<android.content.pm.IPackageManager: boolean hasSystemFeature(java.lang.String)>", "vulType" : "Fake Identify"}, {"checkingBypass" : ["getPackageName identity checking: getPackageName", "myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.pm.PackageManagerService: java.lang.String[] getPackagesForUid(int)>", "serviceApi" : "<android.content.pm.IPackageManager: java.lang.String[] getPackagesForUid(int)>", "vulType" : "Fake Identify"}]}, "android.content.RestrictionsManager": {"interfaceName" : "android.content.IRestrictionsManager", "vulApiList" : [{"checkingBypass" : ["getPackageName identity checking: getPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.restrictions.RestrictionsManagerService$RestrictionsManagerImpl: android.os.Bundle getApplicationRestrictions(java.lang.String)>", "serviceApi" : "<android.content.IRestrictionsManager: android.os.Bundle getApplicationRestrictions(java.lang.String)>", "vulType" : "Fake Identify"}]}, "android.view.WindowId": {"interfaceName" : "android.view.IWindowId", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.view.IWindowId: void registerFocusObserver(android.view.IWindowFocusObserver)>", "serviceApi" : "<android.view.IWindowId: void registerFocusObserver(android.view.IWindowFocusObserver)>", "vulType" : "Fake Status"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.view.IWindowId: void unregisterFocusObserver(android.view.IWindowFocusObserver)>", "serviceApi" : "<android.view.IWindowId: void unregisterFocusObserver(android.view.IWindowFocusObserver)>", "vulType" : "Fake Status"}]}, "android.app.VoiceInteractor": {"interfaceName" : "com.android.internal.app.IVoiceInteractor", "vulApiList" : [{"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.internal.app.IVoiceInteractor: boolean[] supportsCommands(java.lang.String,java.lang.String[])>", "serviceApi" : "<com.android.internal.app.IVoiceInteractor: boolean[] supportsCommands(java.lang.String,java.lang.String[])>", "vulType" : "Fake Identify"}]}, "android.hardware.location.GeofenceHardware": {"interfaceName" : "android.hardware.location.IGeofenceHardware", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<android.hardware.location.IGeofenceHardware: boolean registerForMonitorStateChangeCallback(int,android.hardware.location.IGeofenceHardwareMonitorCallback)>", "serviceApi" : "<android.hardware.location.IGeofenceHardware: boolean registerForMonitorStateChangeCallback(int,android.hardware.location.IGeofenceHardwareMonitorCallback)>", "vulType" : "IPC Flooding"}, {"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["IpcFloodValidator"], "implApi" : "<android.hardware.location.IGeofenceHardware: boolean unregisterForMonitorStateChangeCallback(int,android.hardware.location.IGeofenceHardwareMonitorCallback)>", "serviceApi" : "<android.hardware.location.IGeofenceHardware: boolean unregisterForMonitorStateChangeCallback(int,android.hardware.location.IGeofenceHardwareMonitorCallback)>", "vulType" : "IPC Flooding"}]}, "android.app.usage.UsageStatsManager": {"interfaceName" : "android.app.usage.IUsageStatsManager", "vulApiList" : [{"checkingBypass" : ["myUserId Identify Checking: myUserId"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.usage.UsageStatsService$BinderService: boolean isAppInactive(java.lang.String,int)>", "serviceApi" : "<android.app.usage.IUsageStatsManager: boolean isAppInactive(java.lang.String,int)>", "vulType" : "Fake Identify"}]}, "android.app.UiAutomation": {"interfaceName" : "android.app.IUiAutomationConnection", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "failedValidatorList" : ["MethodStatusValidator"], "implApi" : "<android.app.IUiAutomationConnection: void disconnect()>", "serviceApi" : "<android.app.IUiAutomationConnection: void disconnect()>", "vulType" : "Fake Status"}]}, "android.net.wifi.WifiManager": {"interfaceName" : "android.net.wifi.IWifiManager", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["disableEphemeralNetwork params[0] java.lang.String: l1 -> IllegalArgumentException"], "failedValidatorList" : ["IllegalParameterValidator"], "implApi" : "<com.android.server.wifi.WifiServiceImpl: void disableEphemeralNetwork(java.lang.String)>", "serviceApi" : "<android.net.wifi.IWifiManager: void disableEphemeralNetwork(java.lang.String)>", "vulType" : "Illegal Parameter"}, {"checkingBypass" : ["getOpPackageName identity checking: getOpPackageName"], "enforcement" : [], "failedValidatorList" : ["InconsistentParamsCheckingValidator"], "implApi" : "<com.android.server.wifi.WifiServiceImpl: java.util.List getBatchedScanResults(java.lang.String)>", "serviceApi" : "<android.net.wifi.IWifiManager: java.util.List getBatchedScanResults(java.lang.String)>", "vulType" : "Fake Identify"}]}, "android.media.audiopolicy.AudioPolicy": {"interfaceName" : "android.media.IAudioService", "vulApiList" : [{"checkingBypass" : [], "enforcement" : [], "exceptionList" : ["setFocusPropertiesForPolicy params[0] int: l1 -> IllegalArgumentException"], "failedValidatorList" : ["MethodStatusValidator", "IllegalParameterValidator"], "implApi" : "<com.android.server.audio.AudioService: int setFocusPropertiesForPolicy(int,android.media.audiopolicy.IAudioPolicyCallback)>", "serviceApi" : "<android.media.IAudioService: int setFocusPropertiesForPolicy(int,android.media.audiopolicy.IAudioPolicyCallback)>", "vulType" : "Illegal Parameter"}]}}
+{
+  "android.nfc.Tag": {
+    "interfaceName": "android.nfc.INfcTag",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.nfc.INfcTag: android.nfc.Tag rediscover(int)>",
+        "serviceApi": "<android.nfc.INfcTag: android.nfc.Tag rediscover(int)>",
+        "vulType": "Fake Status"
+      }
+    ]
+  },
+  "android.hardware.camera2.impl.CameraDeviceImpl": {
+    "interfaceName": "android.hardware.camera2.ICameraDeviceUser",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "submitCaptureRequest params[0] java.util.List: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.hardware.camera2.ICameraDeviceUser: int submitRequestList(java.util.List,boolean,android.hardware.camera2.utils.LongParcelable)>",
+        "serviceApi": "<android.hardware.camera2.ICameraDeviceUser: int submitRequestList(java.util.List,boolean,android.hardware.camera2.utils.LongParcelable)>",
+        "vulType": "Illegal Parameter"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.hardware.camera2.ICameraDeviceUser: int createInputStream(int,int,int)>",
+        "serviceApi": "<android.hardware.camera2.ICameraDeviceUser: int createInputStream(int,int,int)>",
+        "vulType": "Fake Status"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.hardware.camera2.ICameraDeviceUser: int endConfigure(boolean)>",
+        "serviceApi": "<android.hardware.camera2.ICameraDeviceUser: int endConfigure(boolean)>",
+        "vulType": "Fake Status"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "tearDown params[0] int: l5 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.hardware.camera2.ICameraDeviceUser: int tearDown(int)>",
+        "serviceApi": "<android.hardware.camera2.ICameraDeviceUser: int tearDown(int)>",
+        "vulType": "Illegal Parameter"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.hardware.camera2.ICameraDeviceUser: int createStream(android.hardware.camera2.params.OutputConfiguration)>",
+        "serviceApi": "<android.hardware.camera2.ICameraDeviceUser: int createStream(android.hardware.camera2.params.OutputConfiguration)>",
+        "vulType": "Fake Status"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "prepare params[0] int: l5 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.hardware.camera2.ICameraDeviceUser: int prepare(int)>",
+        "serviceApi": "<android.hardware.camera2.ICameraDeviceUser: int prepare(int)>",
+        "vulType": "Illegal Parameter"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.hardware.camera2.ICameraDeviceUser: int waitUntilIdle()>",
+        "serviceApi": "<android.hardware.camera2.ICameraDeviceUser: int waitUntilIdle()>",
+        "vulType": "Fake Status"
+      }
+    ]
+  },
+  "android.app.AppOpsManager": {
+    "interfaceName": "com.android.internal.app.IAppOpsService",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName",
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.AppOpsService: int noteProxyOperation(int,java.lang.String,int,java.lang.String)>",
+        "serviceApi": "<com.android.internal.app.IAppOpsService: int noteProxyOperation(int,java.lang.String,int,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.AppOpsService: android.os.IBinder getToken(android.os.IBinder)>",
+        "serviceApi": "<com.android.internal.app.IAppOpsService: android.os.IBinder getToken(android.os.IBinder)>",
+        "vulType": "System Environment Evaluation"
+      }
+    ]
+  },
+  "android.print.PrintManager": {
+    "interfaceName": "android.print.IPrintManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [
+          "android.permission.READ_PROFILE PScout Permission"
+        ],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.print.PrintManagerService$PrintManagerImpl: android.os.Bundle print(java.lang.String,android.print.IPrintDocumentAdapter,android.print.PrintAttributes,java.lang.String,int,int)>",
+        "serviceApi": "<android.print.IPrintManager: android.os.Bundle print(java.lang.String,android.print.IPrintDocumentAdapter,android.print.PrintAttributes,java.lang.String,int,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.print.PrintManagerService$PrintManagerImpl: void addPrintJobStateChangeListener(android.print.IPrintJobStateChangeListener,int,int)>",
+        "serviceApi": "<android.print.IPrintManager: void addPrintJobStateChangeListener(android.print.IPrintJobStateChangeListener,int,int)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.bluetooth.BluetoothHealth": {
+    "interfaceName": "android.bluetooth.IBluetoothHealth",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "params checking2: checkAppParam"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.bluetooth.IBluetoothHealth: boolean registerAppConfiguration(android.bluetooth.BluetoothHealthAppConfiguration,android.bluetooth.IBluetoothHealthCallback)>",
+        "serviceApi": "<android.bluetooth.IBluetoothHealth: boolean registerAppConfiguration(android.bluetooth.BluetoothHealthAppConfiguration,android.bluetooth.IBluetoothHealthCallback)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  },
+  "android.hardware.display.DisplayManagerGlobal": {
+    "interfaceName": "android.hardware.display.IDisplayManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "exceptionList": [
+          "createVirtualDisplay params[6] int: l6 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.display.DisplayManagerService$BinderService: int createVirtualDisplay(android.hardware.display.IVirtualDisplayCallback,android.media.projection.IMediaProjection,java.lang.String,java.lang.String,int,int,int,android.view.Surface,int)>",
+        "serviceApi": "<android.hardware.display.IDisplayManager: int createVirtualDisplay(android.hardware.display.IVirtualDisplayCallback,android.media.projection.IMediaProjection,java.lang.String,java.lang.String,int,int,int,android.view.Surface,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.display.DisplayManagerService$BinderService: void registerCallback(android.hardware.display.IDisplayManagerCallback)>",
+        "serviceApi": "<android.hardware.display.IDisplayManager: void registerCallback(android.hardware.display.IDisplayManagerCallback)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.display.DisplayManagerService$BinderService: void releaseVirtualDisplay(android.hardware.display.IVirtualDisplayCallback)>",
+        "serviceApi": "<android.hardware.display.IDisplayManager: void releaseVirtualDisplay(android.hardware.display.IVirtualDisplayCallback)>",
+        "vulType": "System Environment Evaluation"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.display.DisplayManagerService$BinderService: android.view.DisplayInfo getDisplayInfo(int)>",
+        "serviceApi": "<android.hardware.display.IDisplayManager: android.view.DisplayInfo getDisplayInfo(int)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.media.projection.MediaProjectionManager": {
+    "interfaceName": "android.media.projection.IMediaProjectionManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.media.projection.MediaProjectionManagerService$BinderService: void addCallback(android.media.projection.IMediaProjectionWatcherCallback)>",
+        "serviceApi": "<android.media.projection.IMediaProjectionManager: void addCallback(android.media.projection.IMediaProjectionWatcherCallback)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.service.voice.VoiceInteractionSession": {
+    "interfaceName": "android.service.voice.IVoiceInteractionSession",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean showSessionFromSession(android.os.IBinder,android.os.Bundle,int)>",
+        "serviceApi": "<com.android.internal.app.IVoiceInteractionManagerService: boolean showSessionFromSession(android.os.IBinder,android.os.Bundle,int)>",
+        "vulType": "Fake Status"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: boolean hideSessionFromSession(android.os.IBinder)>",
+        "serviceApi": "<com.android.internal.app.IVoiceInteractionManagerService: boolean hideSessionFromSession(android.os.IBinder)>",
+        "vulType": "Fake Status"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: void finish(android.os.IBinder)>",
+        "serviceApi": "<com.android.internal.app.IVoiceInteractionManagerService: void finish(android.os.IBinder)>",
+        "vulType": "Fake Status"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.service.voice.IVoiceInteractionSession: void closeSystemDialogs()>",
+        "serviceApi": "<android.service.voice.IVoiceInteractionSession: void closeSystemDialogs()>",
+        "vulType": "Fake Status"
+      }
+    ]
+  },
+  "android.app.WallpaperManager": {
+    "interfaceName": "android.app.IWallpaperManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.wallpaper.WallpaperManagerService: boolean isWallpaperSupported(java.lang.String)>",
+        "serviceApi": "<android.app.IWallpaperManager: boolean isWallpaperSupported(java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.wallpaper.WallpaperManagerService: android.os.ParcelFileDescriptor getWallpaper(android.app.IWallpaperManagerCallback,android.os.Bundle)>",
+        "serviceApi": "<android.app.IWallpaperManager: android.os.ParcelFileDescriptor getWallpaper(android.app.IWallpaperManagerCallback,android.os.Bundle)>",
+        "vulType": "System Environment Evaluation"
+      }
+    ]
+  },
+  "android.media.session.MediaSession": {
+    "interfaceName": "android.media.session.ISession",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "setPlaybackToLocal params[0] android.media.AudioAttributes: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.media.session.ISession: void setPlaybackToLocal(android.media.AudioAttributes)>",
+        "serviceApi": "<android.media.session.ISession: void setPlaybackToLocal(android.media.AudioAttributes)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  },
+  "android.app.UiAutomationConnection": {
+    "interfaceName": "android.view.accessibility.IAccessibilityManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "registerUiTestAutomationServiceLocked params[0] android.accessibilityservice.IAccessibilityServiceClient: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<com.android.server.accessibility.AccessibilityManagerService: void registerUiTestAutomationService(android.os.IBinder,android.accessibilityservice.IAccessibilityServiceClient,android.accessibilityservice.AccessibilityServiceInfo)>",
+        "serviceApi": "<android.view.accessibility.IAccessibilityManager: void registerUiTestAutomationService(android.os.IBinder,android.accessibilityservice.IAccessibilityServiceClient,android.accessibilityservice.AccessibilityServiceInfo)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  },
+  "android.nfc.cardemulation.CardEmulation": {
+    "interfaceName": "android.nfc.INfcCardEmulation",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.nfc.INfcCardEmulation: boolean registerAidGroupForService(int,android.content.ComponentName,android.nfc.cardemulation.AidGroup)>",
+        "serviceApi": "<android.nfc.INfcCardEmulation: boolean registerAidGroupForService(int,android.content.ComponentName,android.nfc.cardemulation.AidGroup)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.nfc.INfcCardEmulation: boolean setDefaultForNextTap(int,android.content.ComponentName)>",
+        "serviceApi": "<android.nfc.INfcCardEmulation: boolean setDefaultForNextTap(int,android.content.ComponentName)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.nfc.INfcCardEmulation: android.nfc.cardemulation.AidGroup getAidGroupForService(int,android.content.ComponentName,java.lang.String)>",
+        "serviceApi": "<android.nfc.INfcCardEmulation: android.nfc.cardemulation.AidGroup getAidGroupForService(int,android.content.ComponentName,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.nfc.INfcCardEmulation: boolean isDefaultServiceForAid(int,android.content.ComponentName,java.lang.String)>",
+        "serviceApi": "<android.nfc.INfcCardEmulation: boolean isDefaultServiceForAid(int,android.content.ComponentName,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.nfc.INfcCardEmulation: boolean setDefaultServiceForCategory(int,android.content.ComponentName,java.lang.String)>",
+        "serviceApi": "<android.nfc.INfcCardEmulation: boolean setDefaultServiceForCategory(int,android.content.ComponentName,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.nfc.INfcCardEmulation: java.util.List getServices(int,java.lang.String)>",
+        "serviceApi": "<android.nfc.INfcCardEmulation: java.util.List getServices(int,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.nfc.INfcCardEmulation: boolean removeAidGroupForService(int,android.content.ComponentName,java.lang.String)>",
+        "serviceApi": "<android.nfc.INfcCardEmulation: boolean removeAidGroupForService(int,android.content.ComponentName,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.nfc.INfcCardEmulation: boolean isDefaultServiceForCategory(int,android.content.ComponentName,java.lang.String)>",
+        "serviceApi": "<android.nfc.INfcCardEmulation: boolean isDefaultServiceForCategory(int,android.content.ComponentName,java.lang.String)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.content.ClipboardManager": {
+    "interfaceName": "android.content.IClipboard",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [
+          "getCallingUserId CallerCheckingEnforcement"
+        ],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.clipboard.ClipboardService: void addPrimaryClipChangedListener(android.content.IOnPrimaryClipChangedListener,java.lang.String)>",
+        "serviceApi": "<android.content.IClipboard: void addPrimaryClipChangedListener(android.content.IOnPrimaryClipChangedListener,java.lang.String)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.clipboard.ClipboardService: void setPrimaryClip(android.content.ClipData,java.lang.String)>",
+        "serviceApi": "<android.content.IClipboard: void setPrimaryClip(android.content.ClipData,java.lang.String)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.hardware.input.InputManager": {
+    "interfaceName": "android.hardware.input.IInputManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.input.InputManagerService: void registerInputDevicesChangedListener(android.hardware.input.IInputDevicesChangedListener)>",
+        "serviceApi": "<android.hardware.input.IInputManager: void registerInputDevicesChangedListener(android.hardware.input.IInputDevicesChangedListener)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.net.ConnectivityManager": {
+    "interfaceName": "android.os.INetworkManagementService",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "unregisterNetworkActivityListener params[0] android.os.INetworkActivityListener: l2 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IpcFloodValidator",
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<com.android.server.NetworkManagementService: void unregisterNetworkActivityListener(android.os.INetworkActivityListener)>",
+        "serviceApi": "<android.os.INetworkManagementService: void unregisterNetworkActivityListener(android.os.INetworkActivityListener)>",
+        "vulType": "Illegal Parameter"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.NetworkManagementService: void registerNetworkActivityListener(android.os.INetworkActivityListener)>",
+        "serviceApi": "<android.os.INetworkManagementService: void registerNetworkActivityListener(android.os.INetworkActivityListener)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.media.midi.MidiManager": {
+    "interfaceName": "android.media.midi.IMidiManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.midi.MidiService: void registerListener(android.os.IBinder,android.media.midi.IMidiDeviceListener)>",
+        "serviceApi": "<android.media.midi.IMidiManager: void registerListener(android.os.IBinder,android.media.midi.IMidiDeviceListener)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.midi.MidiService: void unregisterListener(android.os.IBinder,android.media.midi.IMidiDeviceListener)>",
+        "serviceApi": "<android.media.midi.IMidiManager: void unregisterListener(android.os.IBinder,android.media.midi.IMidiDeviceListener)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.app.NotificationManager": {
+    "interfaceName": "android.app.INotificationManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId",
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.app.INotificationManager: void cancelAllNotifications(java.lang.String,int)>",
+        "serviceApi": "<android.app.INotificationManager: void cancelAllNotifications(java.lang.String,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId",
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.app.INotificationManager: void cancelNotificationWithTag(java.lang.String,java.lang.String,int,int)>",
+        "serviceApi": "<android.app.INotificationManager: void cancelNotificationWithTag(java.lang.String,java.lang.String,int,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName",
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.app.INotificationManager: void enqueueNotificationWithTag(java.lang.String,java.lang.String,java.lang.String,int,android.app.Notification,int[],int)>",
+        "serviceApi": "<android.app.INotificationManager: void enqueueNotificationWithTag(java.lang.String,java.lang.String,java.lang.String,int,android.app.Notification,int[],int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.app.INotificationManager: android.app.NotificationManager$Policy getNotificationPolicy(java.lang.String)>",
+        "serviceApi": "<android.app.INotificationManager: android.app.NotificationManager$Policy getNotificationPolicy(java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.app.INotificationManager: void setInterruptionFilter(java.lang.String,int)>",
+        "serviceApi": "<android.app.INotificationManager: void setInterruptionFilter(java.lang.String,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId",
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.app.INotificationManager: android.content.pm.ParceledListSlice getAppActiveNotifications(java.lang.String,int)>",
+        "serviceApi": "<android.app.INotificationManager: android.content.pm.ParceledListSlice getAppActiveNotifications(java.lang.String,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "exceptionList": [
+          "checkRequired params[0] java.lang.Object: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator",
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.app.INotificationManager: void setNotificationPolicy(java.lang.String,android.app.NotificationManager$Policy)>",
+        "serviceApi": "<android.app.INotificationManager: void setNotificationPolicy(java.lang.String,android.app.NotificationManager$Policy)>",
+        "vulType": "Illegal Parameter"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.app.INotificationManager: boolean isNotificationPolicyAccessGranted(java.lang.String)>",
+        "serviceApi": "<android.app.INotificationManager: boolean isNotificationPolicyAccessGranted(java.lang.String)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.net.NetworkPolicyManager": {
+    "interfaceName": "android.net.INetworkPolicyManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.net.NetworkPolicyManagerService: void registerListener(android.net.INetworkPolicyListener)>",
+        "serviceApi": "<android.net.INetworkPolicyManager: void registerListener(android.net.INetworkPolicyListener)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.net.NetworkPolicyManagerService: void unregisterListener(android.net.INetworkPolicyListener)>",
+        "serviceApi": "<android.net.INetworkPolicyManager: void unregisterListener(android.net.INetworkPolicyListener)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.hardware.fingerprint.FingerprintManager": {
+    "interfaceName": "android.hardware.fingerprint.IFingerprintService",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId",
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.fingerprint.FingerprintService$FingerprintServiceWrapper: boolean hasEnrolledFingerprints(int,java.lang.String)>",
+        "serviceApi": "<android.hardware.fingerprint.IFingerprintService: boolean hasEnrolledFingerprints(int,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.fingerprint.FingerprintService$FingerprintServiceWrapper: java.util.List getEnrolledFingerprints(int,java.lang.String)>",
+        "serviceApi": "<android.hardware.fingerprint.IFingerprintService: java.util.List getEnrolledFingerprints(int,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.fingerprint.FingerprintService$FingerprintServiceWrapper: long getAuthenticatorId(java.lang.String)>",
+        "serviceApi": "<android.hardware.fingerprint.IFingerprintService: long getAuthenticatorId(java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.fingerprint.FingerprintService$FingerprintServiceWrapper: void cancelAuthentication(android.os.IBinder,java.lang.String)>",
+        "serviceApi": "<android.hardware.fingerprint.IFingerprintService: void cancelAuthentication(android.os.IBinder,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.fingerprint.FingerprintService$FingerprintServiceWrapper: boolean isHardwareDetected(long,java.lang.String)>",
+        "serviceApi": "<android.hardware.fingerprint.IFingerprintService: boolean isHardwareDetected(long,java.lang.String)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.service.trust.TrustAgentService": {
+    "interfaceName": "android.service.trust.ITrustAgentServiceCallback",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.service.trust.ITrustAgentServiceCallback: void grantTrust(java.lang.CharSequence,long,int)>",
+        "serviceApi": "<android.service.trust.ITrustAgentServiceCallback: void grantTrust(java.lang.CharSequence,long,int)>",
+        "vulType": "Fake Status"
+      }
+    ]
+  },
+  "android.location.Geocoder": {
+    "interfaceName": "android.location.ILocationManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "getFromLocationName params[0] java.lang.String: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<com.android.server.LocationManagerService: java.lang.String getFromLocationName(java.lang.String,double,double,double,double,int,android.location.GeocoderParams,java.util.List)>",
+        "serviceApi": "<android.location.ILocationManager: java.lang.String getFromLocationName(java.lang.String,double,double,double,double,int,android.location.GeocoderParams,java.util.List)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  },
+  "android.bluetooth.BluetoothGatt": {
+    "interfaceName": "android.bluetooth.IBluetoothGatt",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "connectionParameterUpdate params[2] int: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.bluetooth.IBluetoothGatt: void connectionParameterUpdate(int,java.lang.String,int)>",
+        "serviceApi": "<android.bluetooth.IBluetoothGatt: void connectionParameterUpdate(int,java.lang.String,int)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  },
+  "android.content.pm.LauncherApps": {
+    "interfaceName": "android.content.pm.ILauncherApps",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.pm.LauncherAppsService$LauncherAppsImpl: void addOnAppsChangedListener(android.content.pm.IOnAppsChangedListener)>",
+        "serviceApi": "<android.content.pm.ILauncherApps: void addOnAppsChangedListener(android.content.pm.IOnAppsChangedListener)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.content.pm.PackageInstaller": {
+    "interfaceName": "android.content.pm.IPackageInstaller",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<android.content.pm.IPackageInstaller: void registerCallback(android.content.pm.IPackageInstallerCallback,int)>",
+        "serviceApi": "<android.content.pm.IPackageInstaller: void registerCallback(android.content.pm.IPackageInstallerCallback,int)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<android.content.pm.IPackageInstaller: void unregisterCallback(android.content.pm.IPackageInstallerCallback)>",
+        "serviceApi": "<android.content.pm.IPackageInstaller: void unregisterCallback(android.content.pm.IPackageInstallerCallback)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.hardware.display.DisplayManager": {
+    "interfaceName": "android.hardware.display.IDisplayManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "exceptionList": [
+          "createVirtualDisplay params[6] int: l6 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.display.DisplayManagerService$BinderService: int createVirtualDisplay(android.hardware.display.IVirtualDisplayCallback,android.media.projection.IMediaProjection,java.lang.String,java.lang.String,int,int,int,android.view.Surface,int)>",
+        "serviceApi": "<android.hardware.display.IDisplayManager: int createVirtualDisplay(android.hardware.display.IVirtualDisplayCallback,android.media.projection.IMediaProjection,java.lang.String,java.lang.String,int,int,int,android.view.Surface,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.display.DisplayManagerService$BinderService: void releaseVirtualDisplay(android.hardware.display.IVirtualDisplayCallback)>",
+        "serviceApi": "<android.hardware.display.IDisplayManager: void releaseVirtualDisplay(android.hardware.display.IVirtualDisplayCallback)>",
+        "vulType": "System Environment Evaluation"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.display.DisplayManagerService$BinderService: void registerCallback(android.hardware.display.IDisplayManagerCallback)>",
+        "serviceApi": "<android.hardware.display.IDisplayManager: void registerCallback(android.hardware.display.IDisplayManagerCallback)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.display.DisplayManagerService$BinderService: android.view.DisplayInfo getDisplayInfo(int)>",
+        "serviceApi": "<android.hardware.display.IDisplayManager: android.view.DisplayInfo getDisplayInfo(int)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.media.MediaRouter": {
+    "interfaceName": "android.media.IAudioService",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.media.MediaRouterService: void setSelectedRoute(android.media.IMediaRouterClient,java.lang.String,boolean)>",
+        "serviceApi": "<android.media.IMediaRouterService: void setSelectedRoute(android.media.IMediaRouterClient,java.lang.String,boolean)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.media.MediaRouterService: void unregisterClient(android.media.IMediaRouterClient)>",
+        "serviceApi": "<android.media.IMediaRouterService: void unregisterClient(android.media.IMediaRouterClient)>",
+        "vulType": "System Environment Evaluation"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.media.MediaRouterService: android.media.MediaRouterClientState getState(android.media.IMediaRouterClient)>",
+        "serviceApi": "<android.media.IMediaRouterService: android.media.MediaRouterClientState getState(android.media.IMediaRouterClient)>",
+        "vulType": "System Environment Evaluation"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.media.MediaRouterService: void setDiscoveryRequest(android.media.IMediaRouterClient,int,boolean)>",
+        "serviceApi": "<android.media.IMediaRouterService: void setDiscoveryRequest(android.media.IMediaRouterClient,int,boolean)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.audio.AudioService: void setBluetoothA2dpOn(boolean)>",
+        "serviceApi": "<android.media.IAudioService: void setBluetoothA2dpOn(boolean)>",
+        "vulType": "System Environment Evaluation"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.audio.AudioService: android.media.AudioRoutesInfo startWatchingRoutes(android.media.IAudioRoutesObserver)>",
+        "serviceApi": "<android.media.IAudioService: android.media.AudioRoutesInfo startWatchingRoutes(android.media.IAudioRoutesObserver)>",
+        "vulType": "System Environment Evaluation"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId",
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.audio.AudioService: int getStreamVolume(int)>",
+        "serviceApi": "<android.media.IAudioService: int getStreamVolume(int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.audio.AudioService: int getStreamMaxVolume(int)>",
+        "serviceApi": "<android.media.IAudioService: int getStreamMaxVolume(int)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.media.tv.TvInputManager": {
+    "interfaceName": "android.media.tv.ITvInputManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.tv.TvInputManagerService$BinderService: void registerCallback(android.media.tv.ITvInputManagerCallback,int)>",
+        "serviceApi": "<android.media.tv.ITvInputManager: void registerCallback(android.media.tv.ITvInputManagerCallback,int)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.media.session.MediaSessionManager": {
+    "interfaceName": "android.media.session.ISessionManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [
+          "enforcePackageName CallerCheckingEnforcement",
+          "android.permission.READ_PROFILE PScout Permission"
+        ],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.media.MediaSessionService$SessionManagerImpl: void addSessionsListener(android.media.session.IActiveSessionsListener,android.content.ComponentName,int)>",
+        "serviceApi": "<android.media.session.ISessionManager: void addSessionsListener(android.media.session.IActiveSessionsListener,android.content.ComponentName,int)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.location.LocationManager": {
+    "interfaceName": "android.location.ILocationManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "checkCriteria params[0] android.location.Criteria: l0 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<com.android.server.LocationManagerService: java.util.List getProviders(android.location.Criteria,boolean)>",
+        "serviceApi": "<android.location.ILocationManager: java.util.List getProviders(android.location.Criteria,boolean)>",
+        "vulType": "Illegal Parameter"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "checkCriteria params[0] android.location.Criteria: l0 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<com.android.server.LocationManagerService: java.lang.String getBestProvider(android.location.Criteria,boolean)>",
+        "serviceApi": "<android.location.ILocationManager: java.lang.String getBestProvider(android.location.Criteria,boolean)>",
+        "vulType": "Illegal Parameter"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "checkProvider params[0] java.lang.String: l0 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<com.android.server.LocationManagerService: boolean isProviderEnabled(java.lang.String)>",
+        "serviceApi": "<android.location.ILocationManager: boolean isProviderEnabled(java.lang.String)>",
+        "vulType": "Illegal Parameter"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "checkProvider params[0] java.lang.String: l0 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<com.android.server.LocationManagerService: com.android.internal.location.ProviderProperties getProviderProperties(java.lang.String)>",
+        "serviceApi": "<android.location.ILocationManager: com.android.internal.location.ProviderProperties getProviderProperties(java.lang.String)>",
+        "vulType": "Illegal Parameter"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [
+          "checkOp CallerCheckingEnforcement",
+          "android.permission.ACCESS_FINE_LOCATION PScout Permission",
+          "android.permission.ACCESS_COARSE_LOCATION PScout Permission"
+        ],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.LocationManagerService: boolean addGpsStatusListener(android.location.IGpsStatusListener,java.lang.String)>",
+        "serviceApi": "<android.location.ILocationManager: boolean addGpsStatusListener(android.location.IGpsStatusListener,java.lang.String)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.nfc.NfcAdapter": {
+    "interfaceName": "android.nfc.INfcAdapter",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<android.nfc.INfcAdapter: void setAppCallback(android.nfc.IAppCallback)>",
+        "serviceApi": "<android.nfc.INfcAdapter: void setAppCallback(android.nfc.IAppCallback)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.nfc.INfcAdapter: android.nfc.INfcAdapterExtras getNfcAdapterExtrasInterface(java.lang.String)>",
+        "serviceApi": "<android.nfc.INfcAdapter: android.nfc.INfcAdapterExtras getNfcAdapterExtrasInterface(java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.nfc.INfcAdapter: void setForegroundDispatch(android.app.PendingIntent,android.content.IntentFilter[],android.nfc.TechListParcel)>",
+        "serviceApi": "<android.nfc.INfcAdapter: void setForegroundDispatch(android.app.PendingIntent,android.content.IntentFilter[],android.nfc.TechListParcel)>",
+        "vulType": "Fake Status"
+      }
+    ]
+  },
+  "android.hardware.hdmi.HdmiControlManager": {
+    "interfaceName": "android.hardware.hdmi.IHdmiControlService",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.hdmi.HdmiControlService$BinderService: void addHotplugEventListener(android.hardware.hdmi.IHdmiHotplugEventListener)>",
+        "serviceApi": "<android.hardware.hdmi.IHdmiControlService: void addHotplugEventListener(android.hardware.hdmi.IHdmiHotplugEventListener)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.bluetooth.BluetoothDevice": {
+    "interfaceName": "android.bluetooth.IBluetooth",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.bluetooth.IBluetooth: java.lang.String getAddress()>",
+        "serviceApi": "<android.bluetooth.IBluetooth: java.lang.String getAddress()>",
+        "vulType": "Fake Status"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "createBond params[1] int: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.bluetooth.IBluetooth: boolean createBond(android.bluetooth.BluetoothDevice,int)>",
+        "serviceApi": "<android.bluetooth.IBluetooth: boolean createBond(android.bluetooth.BluetoothDevice,int)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  },
+  "android.media.midi.MidiDevice": {
+    "interfaceName": "android.media.midi.IMidiDeviceServer",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "connectPorts params[2] int: l2 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.media.midi.IMidiDeviceServer: void connectPorts(android.os.IBinder,android.os.ParcelFileDescriptor,int)>",
+        "serviceApi": "<android.media.midi.IMidiDeviceServer: void connectPorts(android.os.IBinder,android.os.ParcelFileDescriptor,int)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  },
+  "android.security.KeyStore": {
+    "interfaceName": "android.security.IKeystoreService",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.security.IKeystoreService: int lock(int)>",
+        "serviceApi": "<android.security.IKeystoreService: int lock(int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.security.IKeystoreService: int getState(int)>",
+        "serviceApi": "<android.security.IKeystoreService: int getState(int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.security.IKeystoreService: int isEmpty(int)>",
+        "serviceApi": "<android.security.IKeystoreService: int isEmpty(int)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.net.EthernetManager": {
+    "interfaceName": "android.net.IEthernetManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<android.net.IEthernetManager: void addListener(android.net.IEthernetServiceListener)>",
+        "serviceApi": "<android.net.IEthernetManager: void addListener(android.net.IEthernetServiceListener)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.service.wallpaper.WallpaperService$Engine": {
+    "interfaceName": "android.view.IWindowSession",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.service.wallpaper.IWallpaperConnection: void engineShown(android.service.wallpaper.IWallpaperEngine)>",
+        "serviceApi": "<android.service.wallpaper.IWallpaperConnection: void engineShown(android.service.wallpaper.IWallpaperEngine)>",
+        "vulType": "System Environment Evaluation"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.view.IWindowSession: int addToDisplay(android.view.IWindow,int,android.view.WindowManager$LayoutParams,int,int,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.view.InputChannel)>",
+        "serviceApi": "<android.view.IWindowSession: int addToDisplay(android.view.IWindow,int,android.view.WindowManager$LayoutParams,int,int,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.view.InputChannel)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.view.IWindowSession: void finishDrawing(android.view.IWindow)>",
+        "serviceApi": "<android.view.IWindowSession: void finishDrawing(android.view.IWindow)>",
+        "vulType": "System Environment Evaluation"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.view.IWindowSession: int relayout(android.view.IWindow,int,android.view.WindowManager$LayoutParams,int,int,int,int,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.content.res.Configuration,android.view.Surface)>",
+        "serviceApi": "<android.view.IWindowSession: int relayout(android.view.IWindow,int,android.view.WindowManager$LayoutParams,int,int,int,int,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.graphics.Rect,android.content.res.Configuration,android.view.Surface)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.view.inputmethod.InputMethodManager": {
+    "interfaceName": "com.android.internal.view.IInputMethodSession",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.internal.view.IInputMethodSession: void displayCompletions(android.view.inputmethod.CompletionInfo[])>",
+        "serviceApi": "<com.android.internal.view.IInputMethodSession: void displayCompletions(android.view.inputmethod.CompletionInfo[])>",
+        "vulType": "System Environment Evaluation"
+      }
+    ]
+  },
+  "android.media.AudioManager": {
+    "interfaceName": "android.media.IAudioService",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.audio.AudioService: void setStreamVolume(int,int,int,java.lang.String)>",
+        "serviceApi": "<android.media.IAudioService: void setStreamVolume(int,int,int,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.audio.AudioService: void setRingerModeExternal(int,java.lang.String)>",
+        "serviceApi": "<android.media.IAudioService: void setRingerModeExternal(int,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.audio.AudioService: void setWiredDeviceConnectionState(int,int,java.lang.String,java.lang.String,java.lang.String)>",
+        "serviceApi": "<android.media.IAudioService: void setWiredDeviceConnectionState(int,int,java.lang.String,java.lang.String,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.audio.AudioService: void adjustStreamVolume(int,int,int,java.lang.String)>",
+        "serviceApi": "<android.media.IAudioService: void adjustStreamVolume(int,int,int,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.audio.AudioService: boolean isValidRingerMode(int)>",
+        "serviceApi": "<android.media.IAudioService: boolean isValidRingerMode(int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [
+          "checkCallingOrSelfPermission CallerCheckingEnforcement"
+        ],
+        "exceptionList": [
+          "requestAudioFocus params[6] int: l4 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<com.android.server.audio.AudioService: int requestAudioFocus(android.media.AudioAttributes,int,android.os.IBinder,android.media.IAudioFocusDispatcher,java.lang.String,java.lang.String,int,android.media.audiopolicy.IAudioPolicyCallback)>",
+        "serviceApi": "<android.media.IAudioService: int requestAudioFocus(android.media.AudioAttributes,int,android.os.IBinder,android.media.IAudioFocusDispatcher,java.lang.String,java.lang.String,int,android.media.audiopolicy.IAudioPolicyCallback)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  },
+  "android.view.accessibility.AccessibilityManager": {
+    "interfaceName": "android.view.accessibility.IAccessibilityManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.accessibility.AccessibilityManagerService: int addClient(android.view.accessibility.IAccessibilityManagerClient,int)>",
+        "serviceApi": "<android.view.accessibility.IAccessibilityManager: int addClient(android.view.accessibility.IAccessibilityManagerClient,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<com.android.server.accessibility.AccessibilityManagerService: void interrupt(int)>",
+        "serviceApi": "<android.view.accessibility.IAccessibilityManager: void interrupt(int)>",
+        "vulType": "Fake Status"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<com.android.server.accessibility.AccessibilityManagerService: boolean sendAccessibilityEvent(android.view.accessibility.AccessibilityEvent,int)>",
+        "serviceApi": "<android.view.accessibility.IAccessibilityManager: boolean sendAccessibilityEvent(android.view.accessibility.AccessibilityEvent,int)>",
+        "vulType": "Fake Status"
+      }
+    ]
+  },
+  "android.bluetooth.BluetoothHeadset": {
+    "interfaceName": "android.bluetooth.IBluetoothHeadset",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "sendVendorSpecificResultCode params[1] java.lang.String: l2 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.bluetooth.IBluetoothHeadset: boolean sendVendorSpecificResultCode(android.bluetooth.BluetoothDevice,java.lang.String,java.lang.String)>",
+        "serviceApi": "<android.bluetooth.IBluetoothHeadset: boolean sendVendorSpecificResultCode(android.bluetooth.BluetoothDevice,java.lang.String,java.lang.String)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  },
+  "android.media.browse.MediaBrowser": {
+    "interfaceName": "android.service.media.IMediaBrowserService",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "addSubscription params[0] java.lang.String: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.service.media.IMediaBrowserService: void addSubscription(java.lang.String,android.service.media.IMediaBrowserServiceCallbacks)>",
+        "serviceApi": "<android.service.media.IMediaBrowserService: void addSubscription(java.lang.String,android.service.media.IMediaBrowserServiceCallbacks)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  },
+  "android.app.admin.DevicePolicyManager": {
+    "interfaceName": "android.app.admin.IDevicePolicyManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [
+          "android.permission.READ_PROFILE PScout Permission"
+        ],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.devicepolicy.DevicePolicyManagerService: int getCurrentFailedPasswordAttempts(int)>",
+        "serviceApi": "<android.app.admin.IDevicePolicyManager: int getCurrentFailedPasswordAttempts(int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [
+          "android.permission.READ_PROFILE PScout Permission",
+          "android.permission.READ_PROFILE PScout Permission"
+        ],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.devicepolicy.DevicePolicyManagerService: boolean getCameraDisabled(android.content.ComponentName,int)>",
+        "serviceApi": "<android.app.admin.IDevicePolicyManager: boolean getCameraDisabled(android.content.ComponentName,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [
+          "android.permission.READ_PROFILE PScout Permission",
+          "android.permission.READ_PROFILE PScout Permission"
+        ],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.devicepolicy.DevicePolicyManagerService: boolean getScreenCaptureDisabled(android.content.ComponentName,int)>",
+        "serviceApi": "<android.app.admin.IDevicePolicyManager: boolean getScreenCaptureDisabled(android.content.ComponentName,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.devicepolicy.DevicePolicyManagerService: android.content.ComponentName getProfileOwner(int)>",
+        "serviceApi": "<android.app.admin.IDevicePolicyManager: android.content.ComponentName getProfileOwner(int)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.widget.Toast": {
+    "interfaceName": "android.app.INotificationManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.app.INotificationManager: void enqueueToast(java.lang.String,android.app.ITransientNotification,int)>",
+        "serviceApi": "<android.app.INotificationManager: void enqueueToast(java.lang.String,android.app.ITransientNotification,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.app.INotificationManager: void cancelToast(java.lang.String,android.app.ITransientNotification)>",
+        "serviceApi": "<android.app.INotificationManager: void cancelToast(java.lang.String,android.app.ITransientNotification)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.media.session.MediaController": {
+    "interfaceName": "android.media.session.ISessionController",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.media.session.ISessionController: void adjustVolume(int,int,java.lang.String)>",
+        "serviceApi": "<android.media.session.ISessionController: void adjustVolume(int,int,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<android.media.session.ISessionController: void unregisterCallbackListener(android.media.session.ISessionControllerCallback)>",
+        "serviceApi": "<android.media.session.ISessionController: void unregisterCallbackListener(android.media.session.ISessionControllerCallback)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<android.media.session.ISessionController: void registerCallbackListener(android.media.session.ISessionControllerCallback)>",
+        "serviceApi": "<android.media.session.ISessionController: void registerCallbackListener(android.media.session.ISessionControllerCallback)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.media.session.ISessionController: void setVolumeTo(int,int,java.lang.String)>",
+        "serviceApi": "<android.media.session.ISessionController: void setVolumeTo(int,int,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "sendMediaButton params[0] android.view.KeyEvent: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<android.media.session.ISessionController: boolean sendMediaButton(android.view.KeyEvent)>",
+        "serviceApi": "<android.media.session.ISessionController: boolean sendMediaButton(android.view.KeyEvent)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  },
+  "android.net.wifi.RttManager": {
+    "interfaceName": "android.net.wifi.IRttManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<com.android.server.wifi.RttService$RttServiceImpl: android.net.wifi.RttManager$RttCapabilities getRttCapabilities()>",
+        "serviceApi": "<android.net.wifi.IRttManager: android.net.wifi.RttManager$RttCapabilities getRttCapabilities()>",
+        "vulType": "Fake Status"
+      }
+    ]
+  },
+  "android.location.CountryDetector": {
+    "interfaceName": "android.location.ICountryDetector",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.CountryDetectorService: void addCountryListener(android.location.ICountryListener)>",
+        "serviceApi": "<android.location.ICountryDetector: void addCountryListener(android.location.ICountryListener)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.media.tv.TvInputManager$Session": {
+    "interfaceName": "android.media.tv.ITvInputManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "selectTrack params[1] int: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<com.android.server.tv.TvInputManagerService$BinderService: void selectTrack(android.os.IBinder,int,java.lang.String,int)>",
+        "serviceApi": "<android.media.tv.ITvInputManager: void selectTrack(android.os.IBinder,int,java.lang.String,int)>",
+        "vulType": "Illegal Parameter"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<com.android.server.tv.TvInputManagerService$BinderService: void createOverlayView(android.os.IBinder,android.os.IBinder,android.graphics.Rect,int)>",
+        "serviceApi": "<android.media.tv.ITvInputManager: void createOverlayView(android.os.IBinder,android.os.IBinder,android.graphics.Rect,int)>",
+        "vulType": "Fake Status"
+      }
+    ]
+  },
+  "android.os.storage.StorageManager": {
+    "interfaceName": "android.os.storage.IMountService",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.MountService: void unregisterListener(android.os.storage.IMountServiceListener)>",
+        "serviceApi": "<android.os.storage.IMountService: void unregisterListener(android.os.storage.IMountServiceListener)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.MountService: void registerListener(android.os.storage.IMountServiceListener)>",
+        "serviceApi": "<android.os.storage.IMountService: void registerListener(android.os.storage.IMountServiceListener)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.service.voice.VoiceInteractionService": {
+    "interfaceName": "com.android.internal.app.IVoiceInteractionManagerService",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<com.android.server.voiceinteraction.VoiceInteractionManagerService$VoiceInteractionManagerServiceStub: void showSession(android.service.voice.IVoiceInteractionService,android.os.Bundle,int)>",
+        "serviceApi": "<com.android.internal.app.IVoiceInteractionManagerService: void showSession(android.service.voice.IVoiceInteractionService,android.os.Bundle,int)>",
+        "vulType": "Fake Status"
+      }
+    ]
+  },
+  "android.app.trust.TrustManager": {
+    "interfaceName": "android.app.trust.ITrustManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<android.app.trust.ITrustManager: void registerTrustListener(android.app.trust.ITrustListener)>",
+        "serviceApi": "<android.app.trust.ITrustManager: void registerTrustListener(android.app.trust.ITrustListener)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<android.app.trust.ITrustManager: void unregisterTrustListener(android.app.trust.ITrustListener)>",
+        "serviceApi": "<android.app.trust.ITrustManager: void unregisterTrustListener(android.app.trust.ITrustListener)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.bluetooth.BluetoothAdapter": {
+    "interfaceName": "android.bluetooth.IBluetoothManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.BluetoothManagerService: void unregisterStateChangeCallback(android.bluetooth.IBluetoothStateChangeCallback)>",
+        "serviceApi": "<android.bluetooth.IBluetoothManager: void unregisterStateChangeCallback(android.bluetooth.IBluetoothStateChangeCallback)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<com.android.server.BluetoothManagerService: void registerStateChangeCallback(android.bluetooth.IBluetoothStateChangeCallback)>",
+        "serviceApi": "<android.bluetooth.IBluetoothManager: void registerStateChangeCallback(android.bluetooth.IBluetoothStateChangeCallback)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.app.AlarmManager": {
+    "interfaceName": "android.app.IAlarmManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<android.app.IAlarmManager: android.app.AlarmManager$AlarmClockInfo getNextAlarmClock(int)>",
+        "serviceApi": "<android.app.IAlarmManager: android.app.AlarmManager$AlarmClockInfo getNextAlarmClock(int)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.app.ActivityThread": {
+    "interfaceName": "android.content.pm.IPackageManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName",
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.pm.PackageManagerService: android.content.pm.InstrumentationInfo getInstrumentationInfo(android.content.ComponentName,int)>",
+        "serviceApi": "<android.content.pm.IPackageManager: android.content.pm.InstrumentationInfo getInstrumentationInfo(android.content.ComponentName,int)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.pm.PackageManagerService: boolean performDexOptIfNeeded(java.lang.String,java.lang.String)>",
+        "serviceApi": "<android.content.pm.IPackageManager: boolean performDexOptIfNeeded(java.lang.String,java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.pm.PackageManagerService: boolean hasSystemFeature(java.lang.String)>",
+        "serviceApi": "<android.content.pm.IPackageManager: boolean hasSystemFeature(java.lang.String)>",
+        "vulType": "Fake Identify"
+      },
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName",
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.pm.PackageManagerService: java.lang.String[] getPackagesForUid(int)>",
+        "serviceApi": "<android.content.pm.IPackageManager: java.lang.String[] getPackagesForUid(int)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.content.RestrictionsManager": {
+    "interfaceName": "android.content.IRestrictionsManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getPackageName identity checking: getPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.restrictions.RestrictionsManagerService$RestrictionsManagerImpl: android.os.Bundle getApplicationRestrictions(java.lang.String)>",
+        "serviceApi": "<android.content.IRestrictionsManager: android.os.Bundle getApplicationRestrictions(java.lang.String)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.view.WindowId": {
+    "interfaceName": "android.view.IWindowId",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.view.IWindowId: void registerFocusObserver(android.view.IWindowFocusObserver)>",
+        "serviceApi": "<android.view.IWindowId: void registerFocusObserver(android.view.IWindowFocusObserver)>",
+        "vulType": "Fake Status"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.view.IWindowId: void unregisterFocusObserver(android.view.IWindowFocusObserver)>",
+        "serviceApi": "<android.view.IWindowId: void unregisterFocusObserver(android.view.IWindowFocusObserver)>",
+        "vulType": "Fake Status"
+      }
+    ]
+  },
+  "android.app.VoiceInteractor": {
+    "interfaceName": "com.android.internal.app.IVoiceInteractor",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.internal.app.IVoiceInteractor: boolean[] supportsCommands(java.lang.String,java.lang.String[])>",
+        "serviceApi": "<com.android.internal.app.IVoiceInteractor: boolean[] supportsCommands(java.lang.String,java.lang.String[])>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.hardware.location.GeofenceHardware": {
+    "interfaceName": "android.hardware.location.IGeofenceHardware",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<android.hardware.location.IGeofenceHardware: boolean registerForMonitorStateChangeCallback(int,android.hardware.location.IGeofenceHardwareMonitorCallback)>",
+        "serviceApi": "<android.hardware.location.IGeofenceHardware: boolean registerForMonitorStateChangeCallback(int,android.hardware.location.IGeofenceHardwareMonitorCallback)>",
+        "vulType": "IPC Flooding"
+      },
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "IpcFloodValidator"
+        ],
+        "implApi": "<android.hardware.location.IGeofenceHardware: boolean unregisterForMonitorStateChangeCallback(int,android.hardware.location.IGeofenceHardwareMonitorCallback)>",
+        "serviceApi": "<android.hardware.location.IGeofenceHardware: boolean unregisterForMonitorStateChangeCallback(int,android.hardware.location.IGeofenceHardwareMonitorCallback)>",
+        "vulType": "IPC Flooding"
+      }
+    ]
+  },
+  "android.app.usage.UsageStatsManager": {
+    "interfaceName": "android.app.usage.IUsageStatsManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [
+          "myUserId Identify Checking: myUserId"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.usage.UsageStatsService$BinderService: boolean isAppInactive(java.lang.String,int)>",
+        "serviceApi": "<android.app.usage.IUsageStatsManager: boolean isAppInactive(java.lang.String,int)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.app.UiAutomation": {
+    "interfaceName": "android.app.IUiAutomationConnection",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "failedValidatorList": [
+          "MethodStatusValidator"
+        ],
+        "implApi": "<android.app.IUiAutomationConnection: void disconnect()>",
+        "serviceApi": "<android.app.IUiAutomationConnection: void disconnect()>",
+        "vulType": "Fake Status"
+      }
+    ]
+  },
+  "android.net.wifi.WifiManager": {
+    "interfaceName": "android.net.wifi.IWifiManager",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "disableEphemeralNetwork params[0] java.lang.String: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<com.android.server.wifi.WifiServiceImpl: void disableEphemeralNetwork(java.lang.String)>",
+        "serviceApi": "<android.net.wifi.IWifiManager: void disableEphemeralNetwork(java.lang.String)>",
+        "vulType": "Illegal Parameter"
+      },
+      {
+        "checkingBypass": [
+          "getOpPackageName identity checking: getOpPackageName"
+        ],
+        "enforcement": [],
+        "failedValidatorList": [
+          "InconsistentParamsCheckingValidator"
+        ],
+        "implApi": "<com.android.server.wifi.WifiServiceImpl: java.util.List getBatchedScanResults(java.lang.String)>",
+        "serviceApi": "<android.net.wifi.IWifiManager: java.util.List getBatchedScanResults(java.lang.String)>",
+        "vulType": "Fake Identify"
+      }
+    ]
+  },
+  "android.media.audiopolicy.AudioPolicy": {
+    "interfaceName": "android.media.IAudioService",
+    "vulApiList": [
+      {
+        "checkingBypass": [],
+        "enforcement": [],
+        "exceptionList": [
+          "setFocusPropertiesForPolicy params[0] int: l1 -> IllegalArgumentException"
+        ],
+        "failedValidatorList": [
+          "MethodStatusValidator",
+          "IllegalParameterValidator"
+        ],
+        "implApi": "<com.android.server.audio.AudioService: int setFocusPropertiesForPolicy(int,android.media.audiopolicy.IAudioPolicyCallback)>",
+        "serviceApi": "<android.media.IAudioService: int setFocusPropertiesForPolicy(int,android.media.audiopolicy.IAudioPolicyCallback)>",
+        "vulType": "Illegal Parameter"
+      }
+    ]
+  }
+}
